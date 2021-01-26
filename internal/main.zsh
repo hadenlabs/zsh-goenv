@@ -18,4 +18,7 @@ function goenv::internal::main::factory {
 
 goenv::internal::main::factory
 
+if ! type -p curl > /dev/null; then goenv::internal::curl::install; fi
 if ! type -p goenv > /dev/null; then goenv::internal::goenv::install; fi
+
+goenv::internal::goenv::load
