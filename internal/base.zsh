@@ -7,7 +7,7 @@ function goenv::internal::goenv::install {
     message_success "Installed ${GOENV_PACKAGE_NAME}"
 }
 
-function goenv::internal::init {
+function goenv::internal::goenv::init {
     local goenv_path goenv_global goroot
     goenv_path=$(go env GOPATH)
     goenv_global=$(goenv global)
@@ -18,8 +18,8 @@ function goenv::internal::init {
     export GOROOT="${goroot}"
 }
 
-function goenv::internal::load {
-    goenv::internal::init
+function goenv::internal::goenv::load {
+    goenv::internal::goenv::init
     [ -e "${GOENV_ROOT_BIN}" ] && export PATH="${PATH}:${GOENV_ROOT_BIN}"
     [ -e "${GOENV_ROOT}/shims" ] && export PATH="${GOENV_ROOT}/shims:${PATH}"
     if type -p goenv > /dev/null; then
@@ -27,6 +27,15 @@ function goenv::internal::load {
         [ -e "${GOENV_ROOT_BIN}" ] && export PATH="${GOROOT}/bin:${PATH}"
         [ -e "${GOPATH}/bin" ] && export PATH="${PATH}:${GOPATH}/bin"
     fi
+}
+
+function goenv::internal::curl::install {
+    message_info "Installing curl for ${GOENV_PACKAGE_NAME}"
+    if ! type -p brew > /dev/null; then
+        message_warning "${GOENV_MESSAGE_BREW}"
+    fi
+    brew install curl
+    message_success "Installed curl for ${GOENV_PACKAGE_NAME}"
 }
 
 function goenv::internal::packages::install {
@@ -72,7 +81,7 @@ function goenv::internal::version::global::install {
     message_success "Installed version global of go ${GOENV_VERSION_GLOBAL}"
 }
 
-function goenv::internal::upgrade {
+function goenv::internal::goenv::upgrade {
     message_info "Upgrade for ${GOENV_PACKAGE_NAME}"
     local path_goenv
     path_goenv=$(goenv root)
