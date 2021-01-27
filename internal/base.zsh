@@ -23,7 +23,7 @@ function goenv::internal::goenv::load {
     [ -e "${GOENV_ROOT_BIN}" ] && export PATH="${PATH}:${GOENV_ROOT_BIN}"
     [ -e "${GOENV_ROOT}/shims" ] && export PATH="${GOENV_ROOT}/shims:${PATH}"
     if type -p goenv > /dev/null; then
-        goenv::internal::init
+        goenv::internal::goenv::init
         [ -e "${GOENV_ROOT_BIN}" ] && export PATH="${GOROOT}/bin:${PATH}"
         [ -e "${GOPATH}/bin" ] && export PATH="${PATH}:${GOPATH}/bin"
     fi
