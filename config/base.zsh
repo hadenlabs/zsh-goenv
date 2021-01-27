@@ -38,6 +38,7 @@ export GOENV_PACKAGES=(
     github.com/minamijoyo/myaws/myaws
     github.com/kardianos/govendor
     github.com/motemen/ghq
+    github.com/git-chglog/git-chglog/cmd/git-chglog
     # debug
     github.com/go-delve/delve/cmd/dlv
     # validators
