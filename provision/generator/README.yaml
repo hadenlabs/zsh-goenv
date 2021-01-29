@@ -26,7 +26,7 @@ email:
 #logo: docs/logo.png
 
 # License of this project
-license: 'Mit'
+license: 'MIT'
 
 # Canonical GitHub repo
 github_repo: hadenlabs/zsh-goenv
@@ -54,7 +54,6 @@ requirements: |-
   ```{.sourceCode .bash}
   https://github.com/luismayta/zsh-core
   https://github.com/luismayta/zsh-notify
-  https://github.com/luismayta/zsh-functions
   ```
 
 installation:
