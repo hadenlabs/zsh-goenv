@@ -1,4 +1,4 @@
-# ~/.goenvinator/zsh-goenv.yml
+# ~/.tmuxinator/zsh-goenv.yml
 name: zsh-goenv
 root: ./
 # Optional tmux socket
