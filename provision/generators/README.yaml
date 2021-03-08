@@ -33,15 +33,15 @@ github_repo: hadenlabs/zsh-goenv
 
 # Badges to display
 badges:
-  - name: 'Build Status'
-    image: 'https://travis-ci.org/hadenlabs/zsh-goenv.svg?branch=main'
-    url: 'https://travis-ci.org/hadenlabs/zsh-goenv'
+  - name: Lint
+    image: https://github.com/hadenlabs/zsh-goenv/actions/workflows/lint.yml/badge.svg?branch=develop
+    url: https://github.com/hadenlabs/zsh-goenv/actions
   - name: 'Issues'
     image: 'https://img.shields.io/github/issues/hadenlabs/zsh-goenv.svg'
     url: 'https://github.com/hadenlabs/zsh-goenv/issues'
   - name: 'Latest Release'
     image: 'https://img.shields.io/github/release/hadenlabs/zsh-goenv.svg'
-    url: 'https://travis-ci.org/hadenlabs/zsh-goenv/releases'
+    url: 'https://github.com/hadenlabs/zsh-goenv/releases'
 
 # Short description of this project
 description: |-
@@ -51,7 +51,7 @@ requirements: |-
 
   This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
 
-  ```{.sourceCode .bash}
+  ```{bash}
   https://github.com/luismayta/zsh-core
   https://github.com/luismayta/zsh-notify
   ```
@@ -67,7 +67,5 @@ usage: |-
   make setup
   ```
 
-# Contributors to this project
-contributors:
-  - name: 'Luis Mayta'
-    github: 'luismayta'
+examples:
+  - 'docs/examples/common.md'
