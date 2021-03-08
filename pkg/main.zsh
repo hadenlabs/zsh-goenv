@@ -23,5 +23,3 @@ function goenv::pkg::main::factory {
 }
 
 goenv::pkg::main::factory
-
-goenv::load
