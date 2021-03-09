@@ -7,18 +7,6 @@
 # Name of this project
 name: zsh-goenv
 
-company:
-  name: hadenlabs
-  description: |-
-    company labs
-  url: https://hadenlabs.com
-  github: https://github.com/hadenlabs
-  email: support@hadenlabs.com
-
-copyright:
-  name: Hadenlabs
-  url: https://hadenlabs.com
-
 email:
   support: support@hadenlabs.com
 
@@ -36,12 +24,12 @@ badges:
   - name: Lint
     image: https://github.com/hadenlabs/zsh-goenv/actions/workflows/lint.yml/badge.svg?branch=develop
     url: https://github.com/hadenlabs/zsh-goenv/actions
-  - name: 'Issues'
-    image: 'https://img.shields.io/github/issues/hadenlabs/zsh-goenv.svg'
-    url: 'https://github.com/hadenlabs/zsh-goenv/issues'
-  - name: 'Latest Release'
-    image: 'https://img.shields.io/github/release/hadenlabs/zsh-goenv.svg'
-    url: 'https://github.com/hadenlabs/zsh-goenv/releases'
+  - name: Issues
+    image: https://img.shields.io/github/issues/hadenlabs/zsh-goenv.svg
+    url: https://github.com/hadenlabs/zsh-goenv/issues
+  - name: Latest Release
+    image: https://img.shields.io/github/release/hadenlabs/zsh-goenv.svg
+    url: https://github.com/hadenlabs/zsh-goenv/releases
 
 # Short description of this project
 description: |-
