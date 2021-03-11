@@ -4,6 +4,7 @@
 function goenv::internal::goenv::install {
     message_info "Installing ${GOENV_PACKAGE_NAME}"
     git clone https://github.com/syndbg/goenv.git ~/.goenv
+    goenv::internal::goenv::load
     message_success "Installed ${GOENV_PACKAGE_NAME}"
 }
 
@@ -22,7 +23,7 @@ function goenv::internal::goenv::load {
     goenv::internal::goenv::init
     [ -e "${GOENV_ROOT_BIN}" ] && export PATH="${PATH}:${GOENV_ROOT_BIN}"
     [ -e "${GOENV_ROOT}/shims" ] && export PATH="${GOENV_ROOT}/shims:${PATH}"
-    if type -p goenv > /dev/null; then
+    if core::exists goenv; then
         [ -e "${GOENV_ROOT_BIN}" ] && export PATH="${GOROOT}/bin:${PATH}"
         [ -e "${GOPATH}/bin" ] && export PATH="${PATH}:${GOPATH}/bin"
     fi
@@ -30,7 +31,7 @@ function goenv::internal::goenv::load {
 
 function goenv::internal::curl::install {
     message_info "Installing curl for ${GOENV_PACKAGE_NAME}"
-    if ! type -p brew > /dev/null; then
+    if ! core::exists brew; then
         message_warning "${GOENV_MESSAGE_BREW}"
     fi
     brew install curl
@@ -38,7 +39,7 @@ function goenv::internal::curl::install {
 }
 
 function goenv::internal::packages::install {
-    if ! type -p go > /dev/null; then
+    if ! core::exists go; then
         message_warning "it's neccesary have go"
         return
     fi
@@ -54,7 +55,7 @@ function goenv::internal::packages::install {
 }
 
 function goenv::internal::version::all::install {
-    if ! type -p goenv > /dev/null; then
+    if ! core::exists goenv; then
         message_warning "not found goenv"
         return
     fi
@@ -70,7 +71,7 @@ function goenv::internal::version::all::install {
 }
 
 function goenv::internal::version::global::install {
-    if ! type -p goenv > /dev/null; then
+    if ! core::exists goenv; then
         message_warning "not found goenv"
         return
     fi
