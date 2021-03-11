@@ -9,11 +9,16 @@ function goenv::internal::goenv::install {
 }
 
 function goenv::internal::goenv::init {
+    if [[ ! $(core::exists "goenv") && ! $(core::exists "go") ]]; then
+        return
+    fi
     local goenv_path goenv_global goroot
     goenv_path=$(go env GOPATH)
     goenv_global=$(goenv global)
     goroot=$(goenv prefix)
-    eval "$(goenv init -)"
+    if core::exists goenv; then
+        eval "$(goenv init -)"
+    fi
     [ -e "${GOPATH}/bin" ] && export PATH="${goenv_path}/bin:${PATH}"
     [ -e "${GOENV_ROOT}/versions/${goenv_global}/bin" ] && export PATH="${GOENV_ROOT}/versions/${goenv_global}/bin:${PATH}"
     export GOROOT="${goroot}"
