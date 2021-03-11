@@ -28,7 +28,6 @@ This is a list of plugins that need to be installed previously to enjoy all the 
 
 ```{bash}
 https://github.com/luismayta/zsh-core
-https://github.com/luismayta/zsh-notify
 ```
 
 ## Installation
@@ -65,15 +64,33 @@ to your `.zshrc` where you're adding your other plugins.
 2.  Either open a new terminal to force zsh to load the new plugin, or run `antibody bundle hadenlabs/zsh-goenv` in a running zsh session.
 3.  Enjoy!
 
-## Usage
+## Functions
 
-```bash
-make setup
-```
+zsh goenv includes a small utility `goenv` to fetch and install new packages.
 
-## :page_facing_up: Examples
+#### `goenv::install`
 
-### common
+Install goenv.
+
+#### `goenv::load`
+
+Load path goenv.
+
+#### `goenv::upgrade`
+
+Upgrade version goenv.
+
+#### `goenv::package::all::install`
+
+Install all package of goenv.
+
+#### `goenv::install::versions`
+
+Install versions of config for goenv.
+
+#### `goenv::install::version::global`
+
+Install a version global of goenv.
 
 ## Help
 
