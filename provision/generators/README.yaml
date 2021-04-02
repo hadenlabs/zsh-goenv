@@ -14,13 +14,16 @@ email:
 #logo: docs/logo.png
 
 # License of this project
-license: 'MIT'
+license: 'LGPLv3'
 
 # Canonical GitHub repo
 github_repo: hadenlabs/zsh-goenv
 
 # Badges to display
 badges:
+  - name: GitHub tag (latest SemVer)
+    image: https://img.shields.io/github/v/tag/hadenlabs/zsh-goenv.svg?label=latest&sort=semver
+    url: https://github.com/hadenlabs/zsh-goenv/releases
   - name: Lint
     image: https://github.com/hadenlabs/zsh-goenv/actions/workflows/lint.yml/badge.svg?branch=develop
     url: https://github.com/hadenlabs/zsh-goenv/actions
@@ -39,9 +42,8 @@ requirements: |-
 
   This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
 
-  ```{bash}
-  https://github.com/luismayta/zsh-core
-  ```
+  * [zsh-core](https://github.com/hadenlabs/zsh-core)
+
 
 installation:
   - 'docs/include/installation/oh-my-zsh.md'
