@@ -18,7 +18,7 @@ All notable changes to this project will be documented in this file. This file u
 
 <a name="0.1.0"></a>
 
-## [0.1.0](https://github.com/hadenlabs/zsh-goenv/compare/0.0.0...0.1.0)
+## 0.1.0
 
 > 2021-01-26
 
@@ -42,9 +42,3 @@ All notable changes to this project will be documented in this file. This file u
 - implement settings for docker and docker-compose ([#1](https://github.com/hadenlabs/zsh-goenv/issues/1))
 - implement actions for make ([#1](https://github.com/hadenlabs/zsh-goenv/issues/1))
 - implement settings project ([#1](https://github.com/hadenlabs/zsh-goenv/issues/1))
-
-<a name="0.0.0"></a>
-
-## 0.0.0
-
-> 2021-01-26
