@@ -45,7 +45,7 @@ function goenv::internal::curl::install {
 
 function goenv::internal::packages::install {
     if ! core::exists go; then
-        message_warning "it's neccesary have go"
+        message_warning "it's necessary have go"
         return
     fi
 
