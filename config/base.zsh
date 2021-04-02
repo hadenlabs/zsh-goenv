@@ -43,10 +43,12 @@ export GOENV_PACKAGES=(
     github.com/go-delve/delve/cmd/dlv
     # validators
     github.com/BurntSushi/toml/cmd/tomlv
-    github.com/fzipp/gocyclo
+    github.com/fzipp/gocyclo/cmd/gocyclo
     github.com/go-critic/go-critic/cmd/gocritic
     golang.org/x/lint/golint
     github.com/preslavmihaylov/todocheck
+    github.com/golangci/golangci-lint/cmd/golangci-lint
+
     # build
     github.com/gobuild/gopack
     github.com/aktau/github-release
