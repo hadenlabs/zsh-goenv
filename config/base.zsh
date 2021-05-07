@@ -48,6 +48,8 @@ export GOENV_PACKAGES=(
     golang.org/x/lint/golint
     github.com/preslavmihaylov/todocheck
     github.com/golangci/golangci-lint/cmd/golangci-lint
+    # release
+    github.com/goreleaser/goreleaser
 
     # build
     github.com/gobuild/gopack
