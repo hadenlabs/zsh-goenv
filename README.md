@@ -14,7 +14,7 @@
 
 # zsh-goenv
 
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/hadenlabs/zsh-goenv.svg?label=latest&sort=semver)](https://github.com/hadenlabs/zsh-goenv/releases) [![Lint](https://github.com/hadenlabs/zsh-goenv/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/hadenlabs/zsh-goenv/actions) [![Issues](https://img.shields.io/github/issues/hadenlabs/zsh-goenv.svg)](https://github.com/hadenlabs/zsh-goenv/issues) [![Latest Release](https://img.shields.io/github/release/hadenlabs/zsh-goenv.svg)](https://github.com/hadenlabs/zsh-goenv/releases)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/hadenlabs/zsh-goenv?label=latest&sort=semver)](https://github.com/hadenlabs/zsh-goenv/releases) [![Latest Release](https://img.shields.io/github/release/hadenlabs/zsh-goenv)](https://github.com/hadenlabs/zsh-goenv/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/zsh-goenv/lint-code)](https://github.com/hadenlabs/zsh-goenv/actions) [![Issues](https://img.shields.io/github/issues/hadenlabs/zsh-goenv)](https://github.com/hadenlabs/zsh-goenv/issues) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/Keep%20A%20Changelog-1.0.0-%23E05735)](https://keepachangelog.com) [![Beacon](https://ga-beacon.appspot.com/G-MZEK48EGE8/zsh-goenv/readme)](https://github.com/hadenlabs/zsh-goenv)
 
 zsh-goenv plugin for zsh.
 
@@ -135,7 +135,7 @@ All other trademarks referenced herein are the property of their respective owne
 
 ## License
 
-The code and styles are licensed under the LGPLv3 license [See project license.](LICENSE).
+The code and styles are licensed under the LGPL-3.0 license [See project license.](LICENSE).
 
 ## Don't forget to 🌟 Star 🌟 the repo if you like zsh-goenv
 
