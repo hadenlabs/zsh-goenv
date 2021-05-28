@@ -11,8 +11,9 @@ export GOENV_VERSIONS=(
     1.15.4
     1.15.7
     1.16.0
+    1.16.4
 )
-export GOENV_VERSION_GLOBAL=1.16.0
+export GOENV_VERSION_GLOBAL=1.16.4
 export GOENV_PACKAGES=(
     github.com/onsi/ginkgo/ginkgo
     github.com/onsi/gomega
