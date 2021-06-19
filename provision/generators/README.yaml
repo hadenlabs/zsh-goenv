@@ -21,9 +21,6 @@ github_repo: hadenlabs/zsh-goenv
 
 # Badges to display
 badges:
-  - name: GitHub tag (latest SemVer)
-    image: https://img.shields.io/github/v/tag/hadenlabs/zsh-goenv?label=latest&sort=semver
-    url: https://github.com/hadenlabs/zsh-goenv/releases
   - name: Latest Release
     image: https://img.shields.io/github/release/hadenlabs/zsh-goenv
     url: https://github.com/hadenlabs/zsh-goenv/releases
