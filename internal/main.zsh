@@ -19,5 +19,5 @@ function goenv::internal::main::factory {
 goenv::internal::main::factory
 goenv::internal::goenv::load
 
-if ! core::exists curl; then goenv::internal::curl::install; fi
+if ! core::exists curl; then core::install curl; fi
 if ! core::exists goenv; then goenv::internal::goenv::install; fi
