@@ -43,6 +43,15 @@ function goenv::internal::curl::install {
     message_success "Installed curl for ${GOENV_PACKAGE_NAME}"
 }
 
+function goenv::internal::package::install {
+    if ! core::exists go; then
+        message_warning "it's necessary have go"
+        return
+    fi
+    GO111MODULE=on go get -u -v "${1}"
+    message_success "Installed required Go packages"
+}
+
 function goenv::internal::packages::install {
     if ! core::exists go; then
         message_warning "it's necessary have go"
