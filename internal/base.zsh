@@ -34,15 +34,6 @@ function goenv::internal::goenv::load {
     fi
 }
 
-function goenv::internal::curl::install {
-    message_info "Installing curl for ${GOENV_PACKAGE_NAME}"
-    if ! core::exists brew; then
-        message_warning "${GOENV_MESSAGE_BREW}"
-    fi
-    brew install curl
-    message_success "Installed curl for ${GOENV_PACKAGE_NAME}"
-}
-
 function goenv::internal::package::install {
     if ! core::exists go; then
         message_warning "it's necessary have go"
