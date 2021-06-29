@@ -51,7 +51,7 @@ function goenv::internal::packages::install {
 
     message_info "Installing required go packages"
     # binary will be $(go env GOPATH)/bin/golangci-lint
-    curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b "$(go env GOPATH)"/bin v1.36.0
+    curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b "$(go env GOPATH)"/bin v1.41.0
 
     for package in "${GOENV_PACKAGES[@]}"; do
        GO111MODULE=on go get -u -v "${package}"
