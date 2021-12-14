@@ -7,13 +7,11 @@ export GOENV_ROOT_BIN="${GOENV_ROOT}/bin"
 export GOENV_MESSAGE_BREW="Please install brew or use antibody bundle luismayta/zsh-brew branch:develop"
 export GOENV_PACKAGE_NAME=goenv
 export GOENV_VERSIONS=(
-    1.14.2
-    1.15.4
     1.15.7
-    1.16.0
     1.16.4
+    1.17.5
 )
-export GOENV_VERSION_GLOBAL=1.16.4
+export GOENV_VERSION_GLOBAL=1.17.5
 export GOENV_PACKAGES=(
     github.com/onsi/ginkgo/ginkgo
     github.com/onsi/gomega
