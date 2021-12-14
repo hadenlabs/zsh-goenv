@@ -58,6 +58,7 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/preslavmihaylov/todocheck@latest
     github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 
+    github.com/zricethezav/gitleaks@latest
     # build
     github.com/aktau/github-release@latest
     # engine template
