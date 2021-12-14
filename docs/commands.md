@@ -1,9 +1,11 @@
 <!-- Space: ZshGoenv -->
 <!-- Parent: Project -->
-<!-- Title: Support -->
+<!-- Title: Commands -->
 
-<!-- Label: Support and Contact -->
+<!-- Label: ZshGoenv -->
+<!-- Label: Project -->
+<!-- Label: Commands -->
 <!-- Include: docs/disclaimer.md -->
 <!-- Include: ac:toc -->
 
-# Support & Contact
+## Commands
