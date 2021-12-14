@@ -1,3 +1,11 @@
+<!-- Space: ZshGoenv -->
+<!-- Parent: Project -->
+<!-- Title: Functions -->
+
+<!-- Label: Functions -->
+<!-- Include: docs/disclaimer.md -->
+<!-- Include: ac:toc -->
+
 ## Functions
 
 zsh goenv includes a small utility `goenv` to fetch and install new packages.
