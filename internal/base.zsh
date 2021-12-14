@@ -8,6 +8,12 @@ function goenv::internal::goenv::install {
     message_success "Installed ${GOENV_PACKAGE_NAME}"
 }
 
+function goenv::internal::gobrew::install {
+    message_info "Installing ${GOENV_PACKAGE_NAME}"
+    curl -sLk https://git.io/gobrew | sh -
+    message_success "Installed ${GOENV_PACKAGE_NAME}"
+}
+
 function goenv::internal::goenv::init {
     if [[ ! $(core::exists "goenv") && ! $(core::exists "go") ]]; then
         return
@@ -32,6 +38,10 @@ function goenv::internal::goenv::load {
         [ -e "${GOENV_ROOT_BIN}" ] && export PATH="${GOROOT}/bin:${PATH}"
         [ -e "${GOPATH}/bin" ] && export PATH="${PATH}:${GOPATH}/bin"
     fi
+}
+
+function goenv::internal::gobrew::load {
+    [ -e "${GOBREW_ROOT_BIN}" ] && export PATH="${GOBREW_CURRENT_BIN}:${GOBREW_ROOT_BIN}:${PATH}"
 }
 
 function goenv::internal::package::get {
