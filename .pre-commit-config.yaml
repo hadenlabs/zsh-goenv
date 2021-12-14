@@ -1,3 +1,6 @@
+default_stages:
+  - commit
+
 repos:
   - repo: https://github.com/codespell-project/codespell
     rev: v2.1.0
@@ -40,9 +43,6 @@ repos:
       - id: check-docstring-first
       - id: requirements-txt-fixer
       - id: check-symlinks
-      - id: name-tests-test
-        args:
-          - --django
       - id: file-contents-sorter
       - id: fix-encoding-pragma
       - id: sort-simple-yaml
@@ -70,10 +70,4 @@ repos:
           - --verbose
       - id: hadolint
         args:
-          - --ignore=SC2001
-          - --ignore=SC2086
-          - --ignore=SC2102
-          - --ignore=DL3008
-          - --ignore=DL3013
-          - --ignore=DL3018
-          - --ignore=DL4006
+          - --config=.github/linters/.hadolint.yaml
