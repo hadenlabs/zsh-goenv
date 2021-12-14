@@ -27,12 +27,16 @@ export GOENV_PACKAGES=(
     github.com/99designs/aws-vault
     github.com/minamijoyo/myaws/myaws
     github.com/kardianos/govendor
+    github.com/zricethezav/gitleaks/v7
+    github.com/preslavmihaylov/todocheck
 
     # release
     github.com/goreleaser/goreleaser
 
+
     # build
     github.com/gobuild/gopack
+
 )
 export GOENV_INSTALL_PACKAGES=(
     github.com/pengwynn/flint@latest
