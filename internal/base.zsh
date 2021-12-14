@@ -41,7 +41,9 @@ function goenv::internal::goenv::load {
 }
 
 function goenv::internal::gobrew::load {
+    unset GOROOT
     [ -e "${GOBREW_ROOT_BIN}" ] && export PATH="${GOBREW_CURRENT_BIN}:${GOBREW_ROOT_BIN}:${PATH}"
+    export GOPATH="${GOBREW_ROOT}/current/go"
 }
 
 function goenv::internal::package::get {
