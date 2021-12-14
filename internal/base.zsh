@@ -34,14 +34,38 @@ function goenv::internal::goenv::load {
     fi
 }
 
+function goenv::internal::package::get {
+    if ! core::exists go; then
+        message_warning "it's necessary have go"
+        return
+    fi
+    GO111MODULE=on go get -v "${1}"
+    message_success "Installed ${1} required Go packages"
+}
+
 function goenv::internal::package::install {
     if ! core::exists go; then
         message_warning "it's necessary have go"
         return
     fi
-    GO111MODULE=on go get -u -v "${1}"
+    GO111MODULE=on go install "${1}"
+    message_success "Installed ${1} required Go packages"
+}
+
+function goenv::internal::packages::get {
+    if ! core::exists go; then
+        message_warning "it's necessary have go"
+        return
+    fi
+
+    message_info "Installing required go packages"
+
+    for package in "${GOENV_PACKAGES[@]}"; do
+        goenv::internal::package::get "${package}"
+    done
     message_success "Installed required Go packages"
 }
+
 
 function goenv::internal::packages::install {
     if ! core::exists go; then
@@ -53,8 +77,8 @@ function goenv::internal::packages::install {
     # binary will be $(go env GOPATH)/bin/golangci-lint
     curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b "$(go env GOPATH)"/bin v1.41.0
 
-    for package in "${GOENV_PACKAGES[@]}"; do
-       GO111MODULE=on go get -u -v "${package}"
+    for package in "${GOENV_INSTALL_PACKAGES[@]}"; do
+        goenv::internal::package::install "${package}"
     done
     message_success "Installed required Go packages"
 }
