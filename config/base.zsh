@@ -13,46 +13,54 @@ export GOENV_VERSIONS=(
 )
 export GOENV_VERSION_GLOBAL=1.17.5
 export GOENV_PACKAGES=(
-    github.com/onsi/ginkgo/ginkgo
     github.com/onsi/gomega
-    github.com/pengwynn/flint
-    github.com/dougm/goflymake
-    # ide
-    github.com/mdempsky/gocode
-    github.com/rogpeppe/godef
-    golang.org/x/tools/cmd/goimports
-    golang.org/x/tools/cmd/godoc
-    golang.org/x/tools/cmd/gorename
-    golang.org/x/tools/gopls@latest
-    golang.org/x/tools/cmd/guru
-    github.com/davidrjenni/reftools/cmd/fillstruct
     github.com/josharian/impl
-    github.com/haya14busa/gopkgs/cmd/gopkgs
-    github.com/godoctor/godoctor
-    github.com/zmb3/gogetdoc
+    github.com/onsi/ginkgo/ginkgo
+    github.com/dougm/goflymake
     github.com/fatih/gomodifytags
     github.com/cweill/gotests/...
+
     # tools
     github.com/99designs/aws-vault
     github.com/minamijoyo/myaws/myaws
     github.com/kardianos/govendor
-    github.com/motemen/ghq
-    github.com/git-chglog/git-chglog/cmd/git-chglog
-    # debug
-    github.com/go-delve/delve/cmd/dlv
-    # validators
-    github.com/BurntSushi/toml/cmd/tomlv
-    github.com/fzipp/gocyclo/cmd/gocyclo
-    github.com/go-critic/go-critic/cmd/gocritic
-    golang.org/x/lint/golint
-    github.com/preslavmihaylov/todocheck
-    github.com/golangci/golangci-lint/cmd/golangci-lint
+
     # release
     github.com/goreleaser/goreleaser
 
     # build
     github.com/gobuild/gopack
-    github.com/aktau/github-release
+)
+export GOENV_INSTALL_PACKAGES=(
+    github.com/pengwynn/flint@latest
+    # ide
+    github.com/mdempsky/gocode@latest
+    github.com/rogpeppe/godef@latest
+    golang.org/x/tools/cmd/goimports@latest
+    golang.org/x/tools/cmd/godoc@latest
+    golang.org/x/tools/cmd/gorename@latest
+    golang.org/x/tools/gopls@latest
+    golang.org/x/tools/cmd/guru@latest
+    github.com/davidrjenni/reftools/cmd/fillstruct@latest
+    github.com/haya14busa/gopkgs/cmd/gopkgs@latest
+    github.com/godoctor/godoctor@latest
+    github.com/zmb3/gogetdoc@latest
+    # tools
+    github.com/motemen/ghq@latest
+    github.com/git-chglog/git-chglog/cmd/git-chglog@latest
+    # debug
+    github.com/go-delve/delve/cmd/dlv@latest
+    # validators
+    github.com/BurntSushi/toml/cmd/tomlv@latest
+    github.com/fzipp/gocyclo/cmd/gocyclo@latest
+    github.com/go-critic/go-critic/cmd/gocritic@latest
+    golang.org/x/lint/golint@latest
+    github.com/preslavmihaylov/todocheck@latest
+    github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+
+    # build
+    github.com/aktau/github-release@latest
     # engine template
-    github.com/hairyhenderson/gomplate/v3/cmd/gomplate
+    github.com/hairyhenderson/gomplate/v3/cmd/gomplate@latest
+    github.com/sganon/env-secrets@latest
 )
