@@ -26,6 +26,14 @@ function goenv::package::install {
     goenv::internal::package::install "${@}"
 }
 
+function goenv::package::all::get {
+    goenv::internal::packages::get
+}
+
+function goenv::package::get {
+    goenv::internal::package::get "${@}"
+}
+
 function goenv::install::versions {
     goenv::internal::version::all::install
 }
