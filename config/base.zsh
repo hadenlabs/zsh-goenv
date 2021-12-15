@@ -15,6 +15,7 @@ export GOENV_VERSIONS=(
     1.17.5
 )
 export GOENV_VERSION_GLOBAL=1.17.5
+
 export GOENV_PACKAGES=(
     github.com/onsi/gomega
     github.com/josharian/impl
@@ -33,9 +34,14 @@ export GOENV_PACKAGES=(
     # release
     github.com/goreleaser/goreleaser
 
-
     # build
     github.com/gobuild/gopack
+    # scan
+    github.com/projectdiscovery/subfinder
+    github.com/projectdiscovery/httpx
+
+    # security
+    github.com/OWASP/Amass
 
 )
 export GOENV_INSTALL_PACKAGES=(
@@ -71,4 +77,7 @@ export GOENV_INSTALL_PACKAGES=(
     # engine template
     github.com/hairyhenderson/gomplate/v3/cmd/gomplate@latest
     github.com/sganon/env-secrets@latest
+
+    # scan
+    github.com/tomnomnom/assetfinder@latest
 )
