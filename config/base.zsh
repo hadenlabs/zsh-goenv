@@ -59,6 +59,7 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/godoctor/godoctor@latest
     github.com/zmb3/gogetdoc@latest
     # tools
+    github.com/nektos/act@latest
     github.com/motemen/ghq@latest
     github.com/git-chglog/git-chglog/cmd/git-chglog@latest
     # debug
