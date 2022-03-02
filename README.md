@@ -1,5 +1,7 @@
- <!-- Space: ZshGoenv -->
-<!-- Title: Project -->
+ <!-- Space: ZshGoenv --> 
+<!-- Title: Project --> 
+
+
 
 <!--
 
@@ -15,20 +17,35 @@
 
   -->
 
-[![Latest Release](https://img.shields.io/github/release/hadenlabs/zsh-goenv)](https://github.com/hadenlabs/zsh-goenv/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/zsh-goenv/lint-code)](https://github.com/hadenlabs/zsh-goenv/actions?workflow=lint-code) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange)](https://keepachangelog.com)
+
+ [![Latest Release](https://img.shields.io/github/release/hadenlabs/zsh-goenv)](https://github.com/hadenlabs/zsh-goenv/releases) [![Lint](https://img.shields.io/github/workflow/status/hadenlabs/zsh-goenv/lint-code)](https://github.com/hadenlabs/zsh-goenv/actions?workflow=lint-code) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange)](https://keepachangelog.com)
 
 # zsh-goenv
 
-zsh-goenv for project
+
+
+zsh-goenv for project 
+
+
+
+
+
+
+
+
+
+
 
 ## Requirements
 
+
 This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
 
-- [zsh-core](https://github.com/hadenlabs/zsh-core)
+* [zsh-core](https://github.com/hadenlabs/zsh-core)
+- [python](https://www.python.org)
+- [taskfile](https://github.com/go-task/task)
 
-* [python](https://www.python.org)
-* [taskfile](https://github.com/go-task/task)
+
 
 ## Installation
 
@@ -51,9 +68,9 @@ If you're using [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh), install this pl
 2.  Clone the plugin `bash git clone https://github.com/hadenlabs/zsh-goenv`bash
 3.  Edit your `.zshrc` and add `plugins=( ... zsh-goenv )` to your list of plugins
 4.  Open a new terminal and enjoy!
-    <!-- Space: ZshGoenv -->
-    <!-- Parent: Project -->
-    <!-- Title: Project Installation Antigen -->
+<!-- Space: ZshGoenv -->
+<!-- Parent: Project -->
+<!-- Title: Project Installation Antigen -->
 
 <!-- Label: ZshGoenv -->
 <!-- Label: Project -->
@@ -69,9 +86,9 @@ If you're using [Antigen](https://github.com/zsh-users/antigen), install this pl
 1.  Add `antigen bundle hadenlabs/zsh-goenv` to your `.zshrc` where you're adding your other plugins.
 2.  Either open a new terminal to force zsh to load the new plugin, or run `antigen bundle hadenlabs/zsh-goenv` in a running zsh session.
 3.  Enjoy!
-    <!-- Space: ZshGoenv -->
-    <!-- Parent: Project -->
-    <!-- Title: Project Installation Antibody -->
+<!-- Space: ZshGoenv -->
+<!-- Parent: Project -->
+<!-- Title: Project Installation Antibody -->
 
 <!-- Label: ZshGoenv -->
 <!-- Label: Project -->
@@ -93,6 +110,13 @@ to your `.zshrc` where you're adding your other plugins.
 
 2.  Either open a new terminal to force zsh to load the new plugin, or run `antibody bundle hadenlabs/zsh-goenv` in a running zsh session.
 3.  Enjoy!
+
+
+
+
+
+
+
 
  <!-- Space: ZshGoenv -->
 <!-- Parent: Project -->
@@ -130,11 +154,17 @@ Install versions of config for goenv.
 
 Install a version global of goenv.
 
+
+
+
+
+
 ## Help
 
 **Got a question?**
 
 File a GitHub [issue](https://github.com/hadenlabs/zsh-goenv/issues).
+
 
 ## Contributing
 
@@ -152,21 +182,37 @@ Using the given version number of `MAJOR.MINOR.PATCH`, we apply the following co
 
 ### Backwards compatibility in `0.0.z` and `0.y.z` version
 
-- In the context of initial development, backwards compatibility in versions `0.0.z` is **not guaranteed** when `z` is increased. (Initial development)
-- In the context of pre-release, backwards compatibility in versions `0.y.z` is **not guaranteed** when `y` is increased. (Pre-release)
+- In the context of initial development, backwards compatibility in versions `0.0.z` is **not guaranteed** when `z` is
+  increased. (Initial development)
+- In the context of pre-release, backwards compatibility in versions `0.y.z` is **not guaranteed** when `y` is
+  increased. (Pre-release)
+
+
+
 
 ## Copyright
 
 Copyright © 2018-2022 [Hadenlabs](https://hadenlabs.com)
 
+
+
 ## Trademarks
 
 All other trademarks referenced herein are the property of their respective owners.
+
+
+
+
+
 
 ## License
 
 The code and styles are licensed under the LGPL-3.0 license [See project license.](LICENSE).
 
+
+
 ## Don't forget to 🌟 Star 🌟 the repo if you like zsh-goenv
 
+
 [Your feedback is appreciated](https://github.com/hadenlabs/zsh-goenv/issues)
+
