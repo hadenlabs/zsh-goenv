@@ -78,7 +78,6 @@ function goenv::internal::packages::get {
     message_success "Installed required Go packages"
 }
 
-
 function goenv::internal::packages::install {
     if ! core::exists go; then
         message_warning "it's necessary have go"
