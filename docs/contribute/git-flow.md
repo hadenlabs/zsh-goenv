@@ -1,12 +1,12 @@
-<!-- Space: ZshGoenv -->
-<!-- Parent: Project -->
-<!-- Title: Contributing GitFlow -->
+<!-- Space: Projects -->
+<!-- Parent: ZshGoenv -->
+<!-- Title: Contributing GitFlow ZshGoenv -->
 
 <!-- Label: ZshGoenv -->
 <!-- Label: Project -->
 <!-- Label: Contributing -->
 <!-- Label: GitFlow -->
-<!-- Include: docs/disclaimer.md -->
+<!-- Include: ./../disclaimer.md -->
 <!-- Include: ac:toc -->
 
 To contribute to zsh-goenv project on [GitHub](https://github.com/hadenlabs/zsh-goenv), We use Gitflow (See more [here](https://datasift.github.io/gitflow/IntroducingGitFlow.html)) In a nutshell, it means that you should branch from the main repository and contribute back by making [pull request](https://github.com/hadenlabs/zsh-goenv/pulls).
@@ -17,7 +17,7 @@ To contribute to zsh-goenv project on [GitHub](https://github.com/hadenlabs/zsh-
 
 To follow the instructions in this guide and start contributing to zsh-goenv project on Gitlab:
 
-1.  **Fork** the repo on GitLab
+1.  **Fork** the repo on GitHub
 2.  **Clone** the project to your own machine
 
 To synchronize with the main repository, add it to the remotes:
@@ -63,7 +63,7 @@ To resolve a conflict, run the following commands.
 
 ```bash
 # checkout a branch you open MR from
-git fetch upstream # assuming upstream is rfid/zsh-goenv
+git fetch upstream # assuming upstream is hadenlabs/zsh-goenv
 git merge upstream/merge_branch # Where merge_branch is a branch you open merge request against.
 # resolve merge requests
 git add changed_files

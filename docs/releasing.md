@@ -1,11 +1,11 @@
-<!-- Space: ZshGoenv -->
-<!-- Parent: Project -->
-<!-- Title: Releasing -->
+<!-- Space: Projects -->
+<!-- Parent: ZshGoenv -->
+<!-- Title: Releasing ZshGoenv -->
 
 <!-- Label: ZshGoenv -->
 <!-- Label: Project -->
 <!-- Label: Releasing -->
-<!-- Include: docs/disclaimer.md -->
+<!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
 
 # Releasing
