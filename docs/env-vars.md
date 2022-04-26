@@ -1,11 +1,11 @@
-<!-- Space: ZshGoenv -->
-<!-- Parent: Project -->
-<!-- Title: Env Vars -->
+<!-- Space: Projects -->
+<!-- Parent: ZshGoenv -->
+<!-- Title: Env Vars ZshGoenv -->
 
 <!-- Label: ZshGoenv -->
 <!-- Label: Project -->
 <!-- Label: Env Vars -->
-<!-- Include: docs/disclaimer.md -->
+<!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
 
 ---

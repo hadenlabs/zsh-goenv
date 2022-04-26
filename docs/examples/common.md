@@ -1,9 +1,9 @@
-<!-- Space: ZshGoenv -->
-<!-- Parent: Project -->
-<!-- Title: Project Examples -->
+<!-- Space: Projects -->
+<!-- Parent: ZshGoenv -->
+<!-- Title: Examples ZshGoenv -->
 
 <!-- Label: Examples -->
-<!-- Include: docs/disclaimer.md -->
+<!-- Include: ./../disclaimer.md -->
 <!-- Include: ac:toc -->
 
 ### common
