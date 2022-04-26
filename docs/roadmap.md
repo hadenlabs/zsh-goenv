@@ -1,9 +1,9 @@
-<!-- Space: ZshGoenv -->
-<!-- Parent: Project -->
-<!-- Title: Roadmap -->
+<!-- Space: Projects -->
+<!-- Parent: ZshGoenv -->
+<!-- Title: Roadmap ZshGoenv -->
 
 <!-- Label: Roadmap -->
-<!-- Include: docs/disclaimer.md -->
+<!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
 
 <!-- Macro: :todo:
@@ -40,5 +40,15 @@ You can see the corresponding projects on [zsh-goenv](https://github.com/hadenla
 - :feedback: : actively looking for feedback
 
 ## Epics
+
+### Agosto 2021
+
+### September 2021
+
+### October 2021
+
+### November 2021
+
+### December 2021
 
 ## Long Lived Initiatives
