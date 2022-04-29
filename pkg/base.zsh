@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 
 function goenv::install {
-    goenv::internal::goenv::install
+    goenv::internal::gobrew::install
 }
 
 function goenv::load {
-    goenv::internal::goenv::load
+    goenv::internal::gobrew::load
 }
 
 function goenv::post_install {
@@ -15,7 +15,7 @@ function goenv::post_install {
 }
 
 function goenv::upgrade {
-    goenv::internal::goenv::upgrade
+    goenv::internal::gobrew::upgrade
 }
 
 function goenv::package::all::install {
