@@ -13,8 +13,9 @@ export GOENV_VERSIONS=(
     1.15.7
     1.16.4
     1.17.5
+    1.18.1
 )
-export GOENV_VERSION_GLOBAL=1.17.5
+export GOENV_VERSION_GLOBAL=1.18.1
 
 export GOENV_PACKAGES=(
     github.com/onsi/gomega
