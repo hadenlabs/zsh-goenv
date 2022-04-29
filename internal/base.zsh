@@ -1,13 +1,13 @@
 #!/usr/bin/env ksh
 # -*- coding: utf-8 -*-
 
-function goenv::internal::gobrew::install {
+function goenv::internal::install {
     message_info "Installing ${GOENV_PACKAGE_NAME}"
     curl -sLk https://git.io/gobrew | sh -
     message_success "Installed ${GOENV_PACKAGE_NAME}"
 }
 
-function goenv::internal::gobrew::load {
+function goenv::internal::load {
     unset GOROOT
     [ -e "${GOBREW_ROOT_BIN}" ] && export PATH="${GOBREW_CURRENT_BIN}:${GOBREW_ROOT_BIN}:${PATH}"
     export GOPATH="${GOBREW_ROOT}/current/go"
@@ -69,10 +69,10 @@ function goenv::internal::version::all::install {
 
     for version in "${GOENV_VERSIONS[@]}"; do
         message_info "Install version of go ${version}"
-        goenv install "${version}"
+        gobrew install "${version}"
         message_success "Installed version of go ${version}"
     done
-    goenv use "${GOENV_VERSION_GLOBAL}"
+    gobrew use "${GOENV_VERSION_GLOBAL}"
     message_success "Installed versions of Go"
 
 }
@@ -88,7 +88,7 @@ function goenv::internal::version::global::install {
     message_success "Installed version global of go ${GOENV_VERSION_GLOBAL}"
 }
 
-function goenv::internal::gobrew::upgrade {
+function goenv::internal::upgrade {
     message_info "Upgrade for ${GOENV_PACKAGE_NAME}"
     curl -sLk https://git.io/gobrew | sh -
     message_success "Upgraded ${GOENV_PACKAGE_NAME}"
