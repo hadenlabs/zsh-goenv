@@ -1,6 +1,6 @@
 #!/usr/bin/env ksh
 # -*- coding: utf-8 -*-
-
+#
 export GO111MODULES=auto
 export GOENV_ROOT="${HOME}/.goenv"
 export GOENV_ROOT_BIN="${GOENV_ROOT}/bin"
@@ -9,6 +9,9 @@ export GOBREW_ROOT_BIN="${GOBREW_ROOT}/bin"
 export GOBREW_CURRENT_BIN="${GOBREW_ROOT}/current/bin"
 export GOENV_MESSAGE_BREW="Please install brew or use antibody bundle luismayta/zsh-brew branch:develop"
 export GOENV_PACKAGE_NAME=goenv
+
+export ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.18
+
 export GOENV_VERSIONS=(
     1.15.7
     1.16.4
