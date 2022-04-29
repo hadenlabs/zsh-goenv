@@ -17,7 +17,7 @@ function goenv::internal::main::factory {
 }
 
 goenv::internal::main::factory
-goenv::internal::gobrew::load
+goenv::internal::load
 
 if ! core::exists curl; then core::install curl; fi
-if ! core::exists gobrew; then goenv::internal::gobrew::install; fi
+if ! core::exists gobrew; then goenv::internal::install; fi
