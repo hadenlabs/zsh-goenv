@@ -35,9 +35,6 @@ export GOENV_PACKAGES=(
     github.com/zricethezav/gitleaks/v7
     github.com/preslavmihaylov/todocheck
 
-    # release
-    github.com/goreleaser/goreleaser
-
     # build
     github.com/gobuild/gopack
     # scan
@@ -62,6 +59,9 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/haya14busa/gopkgs/cmd/gopkgs@latest
     github.com/godoctor/godoctor@latest
     github.com/zmb3/gogetdoc@latest
+
+    # release
+    github.com/goreleaser/goreleaser@latest
     # tools
     github.com/nektos/act@latest
     github.com/motemen/ghq@latest
