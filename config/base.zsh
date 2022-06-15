@@ -30,7 +30,6 @@ export GOENV_PACKAGES=(
 
     # tools
     github.com/99designs/aws-vault
-    github.com/minamijoyo/myaws/myaws
     github.com/kardianos/govendor
     github.com/zricethezav/gitleaks/v7
     github.com/preslavmihaylov/todocheck
@@ -66,6 +65,7 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/nektos/act@latest
     github.com/motemen/ghq@latest
     github.com/git-chglog/git-chglog/cmd/git-chglog@latest
+    github.com/minamijoyo/myaws@latest
     # debug
     github.com/go-delve/delve/cmd/dlv@latest
     # validators
