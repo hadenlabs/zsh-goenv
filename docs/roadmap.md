@@ -52,3 +52,7 @@ You can see the corresponding projects on [zsh-goenv](https://github.com/hadenla
 ### December 2021
 
 ## Long Lived Initiatives
+
+These projects don't have an end date. They are something we'll continuously work towards.
+
+- [Better Docs](https://hadenlabs.atlassian.net/wiki)
