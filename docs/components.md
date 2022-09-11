@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: ZshGoenv -->
 <!-- Title: Components ZshGoenv -->
-
 <!-- Label: ZshGoenv -->
 <!-- Label: Project -->
 <!-- Label: Components -->

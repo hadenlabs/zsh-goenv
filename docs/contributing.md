@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: ZshGoenv -->
 <!-- Title: Contributing ZshGoenv -->
-
 <!-- Label: ZshGoenv -->
 <!-- Label: Contributing -->
 <!-- Include: disclaimer.md -->

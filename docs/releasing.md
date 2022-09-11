@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: ZshGoenv -->
 <!-- Title: Releasing ZshGoenv -->
-
 <!-- Label: ZshGoenv -->
 <!-- Label: Project -->
 <!-- Label: Releasing -->
