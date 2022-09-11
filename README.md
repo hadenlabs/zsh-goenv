@@ -32,7 +32,6 @@ This is a list of plugins that need to be installed previously to enjoy all the 
 <!-- Space: Projects -->
 <!-- Parent: Project -->
 <!-- Title: Installation Oh-My-Zsh ZshGoenv -->
-
 <!-- Label: ZshGoenv -->
 <!-- Label: Project -->
 <!-- Label: Installation -->
@@ -51,13 +50,12 @@ If you're using [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh), install this pl
     <!-- Space: Projects -->
     <!-- Parent: Project -->
     <!-- Title: Installation Antigen ZshGoenv -->
-
-<!-- Label: ZshGoenv -->
-<!-- Label: Project -->
-<!-- Label: Installation -->
-<!-- Label: Antigen -->
-<!-- Include: docs/disclaimer.md -->
-<!-- Include: ac:toc -->
+    <!-- Label: ZshGoenv -->
+    <!-- Label: Project -->
+    <!-- Label: Installation -->
+    <!-- Label: Antigen -->
+    <!-- Include: docs/disclaimer.md -->
+    <!-- Include: ac:toc -->
 
 ### [antigen](https://github.com/zsh-users/antigen) users
 
@@ -69,12 +67,11 @@ If you're using [Antigen](https://github.com/zsh-users/antigen), install this pl
     <!-- Space: Projects -->
     <!-- Parent: Project -->
     <!-- Title: Installation Antibody ZshGoenv -->
-
-<!-- Label: ZshGoenv -->
-<!-- Label: Project -->
-<!-- Label: Installation -->
-<!-- Include: docs/disclaimer.md -->
-<!-- Include: ac:toc -->
+    <!-- Label: ZshGoenv -->
+    <!-- Label: Project -->
+    <!-- Label: Installation -->
+    <!-- Include: docs/disclaimer.md -->
+    <!-- Include: ac:toc -->
 
 ### [antibody](https://github.com/getantibody/antibody) users
 
@@ -104,7 +101,6 @@ task setup
 <!-- Space: Projects -->
 <!-- Parent: ZshGoenv -->
 <!-- Title: Examples ZshGoenv -->
-
 <!-- Label: Examples -->
 <!-- Include: ./../disclaimer.md -->
 <!-- Include: ac:toc -->
@@ -114,7 +110,6 @@ task setup
  <!-- Space: Projects -->
 <!-- Parent: Project -->
 <!-- Title: Functions -->
-
 <!-- Label: Functions -->
 <!-- Include: docs/disclaimer.md -->
 <!-- Include: ac:toc -->
