@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: ZshGoenv -->
 <!-- Title: Contributing GitFlow ZshGoenv -->
-
 <!-- Label: ZshGoenv -->
 <!-- Label: Project -->
 <!-- Label: Contributing -->

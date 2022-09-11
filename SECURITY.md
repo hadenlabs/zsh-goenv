@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: ZshGoenv -->
 <!-- Title: Security ZshGoenv -->
-
 <!-- Label: ZshGoenv -->
 <!-- Label: Security -->
 <!-- Include: docs/disclaimer.md -->

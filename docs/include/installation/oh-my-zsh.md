@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: Project -->
 <!-- Title: Installation Oh-My-Zsh ZshGoenv -->
-
 <!-- Label: ZshGoenv -->
 <!-- Label: Project -->
 <!-- Label: Installation -->
