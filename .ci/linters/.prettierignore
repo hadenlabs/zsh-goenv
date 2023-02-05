@@ -17,4 +17,5 @@ terraform.md
 vendor
 out
 .vscode-test
+.cache
 .venv
