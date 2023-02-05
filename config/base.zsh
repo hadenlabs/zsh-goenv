@@ -76,6 +76,7 @@ export GOENV_INSTALL_PACKAGES=(
     golang.org/x/lint/golint@latest
     github.com/preslavmihaylov/todocheck@latest
     github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+    github.com/google/yamlfmt/cmd/yamlfmt@latest
 
     github.com/zricethezav/gitleaks@latest
     # build
