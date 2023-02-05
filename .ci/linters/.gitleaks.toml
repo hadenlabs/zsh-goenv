@@ -252,6 +252,13 @@ title = "gitleaks config"
 
 [whitelist]
   description = "image and html allowlists"
+  paths = [
+    '''^vendor/''',
+    '''^bower_components/''',
+    '''^public/''',
+    '''^node_modules/''',
+    '''^theme/''',
+  ]
   files = [
     '''(.*?)(jpg|gif|png|doc|pdf|bin|mp3|mp4|mov|ttf|woff|woff2|eot|lock)$''',
     '''^\.gitignore$''',
@@ -260,7 +267,5 @@ title = "gitleaks config"
     '''^yarn.lock$''',
     '''^sonar-project.properties$''',
   ]
-  paths = [
-    '''^vendor/(.*?)$''',
-    '''^node_modules/(.*?)$''',
-  ]
+
+  commits = []

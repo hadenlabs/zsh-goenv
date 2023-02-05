@@ -7,18 +7,16 @@ export GOENV_ROOT_BIN="${GOENV_ROOT}/bin"
 export GOBREW_ROOT="${HOME}/.gobrew"
 export GOBREW_ROOT_BIN="${GOBREW_ROOT}/bin"
 export GOBREW_CURRENT_BIN="${GOBREW_ROOT}/current/bin"
-export GOENV_MESSAGE_BREW="Please install brew or use antibody bundle luismayta/zsh-brew branch:develop"
+export GOENV_MESSAGE_BREW="Please install brew or use antibody bundle luismayta/zsh-brew"
 export GOENV_PACKAGE_NAME=goenv
 
 export ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.18
 
 export GOENV_VERSIONS=(
-    1.15.7
-    1.16.4
-    1.17.5
     1.18.1
+    1.19.5
 )
-export GOENV_VERSION_GLOBAL=1.18.1
+export GOENV_VERSION_GLOBAL=1.19.5
 
 export GOENV_PACKAGES=(
     github.com/onsi/gomega
@@ -62,10 +60,13 @@ export GOENV_INSTALL_PACKAGES=(
     # release
     github.com/goreleaser/goreleaser@latest
     # tools
+    honnef.co/go/tools/cmd/staticcheck@latest
     github.com/nektos/act@latest
     github.com/motemen/ghq@latest
     github.com/git-chglog/git-chglog/cmd/git-chglog@latest
     github.com/minamijoyo/myaws@latest
+    # sec
+    github.com/aquasecurity/tfsec/cmd/tfsec@latest
     # debug
     github.com/go-delve/delve/cmd/dlv@latest
     # validators
