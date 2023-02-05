@@ -1,3 +1,4 @@
+---
 version: '3'
 
 tasks:
@@ -34,7 +35,7 @@ tasks:
     desc: Setup python dependences.
     run: once
     cmds:
-      - pipenv install --dev --skip-lock
+      - pipenv install --dev --python {{.PYTHON_VERSION}}
     deps:
       - task: check:python
       - task: check:pipenv
