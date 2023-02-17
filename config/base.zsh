@@ -59,6 +59,9 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/godoctor/godoctor@latest
     github.com/zmb3/gogetdoc@latest
 
+    # scm git
+    github.com/matsuyoshi30/gitsu@latest
+
     # release
     github.com/goreleaser/goreleaser@latest
     # tools
