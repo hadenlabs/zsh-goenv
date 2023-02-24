@@ -45,6 +45,7 @@ export GOENV_PACKAGES=(
 export GOENV_INSTALL_PACKAGES=(
     github.com/pengwynn/flint@latest
     # k8s
+    sigs.k8s.io/kustomize/kustomize/v5@latest
     github.com/particledecay/kconf@latest
     # ide
     github.com/mdempsky/gocode@latest
