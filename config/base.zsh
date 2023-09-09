@@ -15,8 +15,9 @@ export ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.18
 export GOENV_VERSIONS=(
     1.18.1
     1.19.5
+    1.21.1
 )
-export GOENV_VERSION_GLOBAL=1.19.5
+export GOENV_VERSION_GLOBAL=1.21.1
 
 export GOENV_PACKAGES=(
     github.com/onsi/gomega
