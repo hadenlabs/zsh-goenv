@@ -4,8 +4,7 @@
 export GO111MODULES=auto
 export GOENV_ROOT="${HOME}/.goenv"
 export GOENV_ROOT_BIN="${GOENV_ROOT}/bin"
-export GOBREW_ROOT="${HOME}/.gobrew"
-export GOBREW_ROOT_BIN="${GOBREW_ROOT}/bin"
+export GOBREW_ROOT_BIN="${HOME}/.gobrew/bin"
 export GOBREW_CURRENT_BIN="${GOBREW_ROOT}/current/bin"
 export GOENV_MESSAGE_BREW="Please install brew or use antibody bundle luismayta/zsh-brew"
 export GOENV_PACKAGE_NAME=goenv
@@ -17,7 +16,7 @@ export GOENV_VERSIONS=(
     1.19.5
     1.21.1
 )
-export GOENV_VERSION_GLOBAL=1.21.1
+export GOENV_VERSION_GLOBAL=1.21.3
 
 export GOENV_PACKAGES=(
     github.com/onsi/gomega
@@ -67,6 +66,7 @@ export GOENV_INSTALL_PACKAGES=(
     # release
     github.com/goreleaser/goreleaser@latest
     # tools
+    github.com/go-task/task/v3/cmd/task@latest
     honnef.co/go/tools/cmd/staticcheck@latest
     github.com/nektos/act@latest
     github.com/motemen/ghq@latest
