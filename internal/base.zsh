@@ -3,14 +3,14 @@
 
 function goenv::internal::install {
     message_info "Installing ${GOENV_PACKAGE_NAME}"
-    curl -sLk https://git.io/gobrew | sh -
+    curl -sLk https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh
     message_success "Installed ${GOENV_PACKAGE_NAME}"
 }
 
 function goenv::internal::load {
     unset GOROOT
     [ -e "${GOBREW_ROOT_BIN}" ] && export PATH="${GOBREW_CURRENT_BIN}:${GOBREW_ROOT_BIN}:${PATH}"
-    export GOPATH="${GOBREW_ROOT}/current/go"
+    export GOROOT="${HOME}/.gobrew/current/go"
 }
 
 function goenv::internal::package::get {
