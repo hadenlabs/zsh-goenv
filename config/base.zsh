@@ -9,12 +9,12 @@ export GOBREW_CURRENT_BIN="${GOBREW_ROOT}/current/bin"
 export GOENV_MESSAGE_BREW="Please install brew or use antibody bundle luismayta/zsh-brew"
 export GOENV_PACKAGE_NAME=goenv
 
-export ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.18
+export ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.21
 
 export GOENV_VERSIONS=(
     1.18.1
     1.19.5
-    1.21.1
+    1.21.3
 )
 export GOENV_VERSION_GLOBAL=1.21.3
 

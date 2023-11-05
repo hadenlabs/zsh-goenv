@@ -37,6 +37,7 @@ docs = ["mkdocs", "mkdocs-material"]
 [tool.poetry_bumpversion.file."sonar-project.properties"]
 search = 'sonar.projectVersion={current_version}'
 replace = 'sonar.projectVersion={new_version}'
+
 [tool.black]
 line-length = 120
 
