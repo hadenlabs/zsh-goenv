@@ -5,7 +5,7 @@ export GO111MODULES=auto
 export GOENV_ROOT="${HOME}/.goenv"
 export GOENV_ROOT_BIN="${GOENV_ROOT}/bin"
 export GOBREW_ROOT_BIN="${HOME}/.gobrew/bin"
-export GOBREW_CURRENT_BIN="${GOBREW_ROOT}/current/bin"
+export GOBREW_CURRENT_BIN="${HOME}/.gobrew/current/bin"
 export GOENV_MESSAGE_BREW="Please install brew or use antibody bundle luismayta/zsh-brew"
 export GOENV_PACKAGE_NAME=goenv
 
