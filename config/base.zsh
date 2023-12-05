@@ -59,7 +59,11 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/haya14busa/gopkgs/cmd/gopkgs@latest
     github.com/godoctor/godoctor@latest
     github.com/zmb3/gogetdoc@latest
-
+    # apidocs
+    github.com/swaggo/swag/cmd/swag@latest
+    # mocks
+    github.com/zekrotja/schnittstelle/cmd/schnittstelle@latest
+    github.com/vektra/mockery/v2@latest
     # scm git
     github.com/matsuyoshi30/gitsu@latest
 
