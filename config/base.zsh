@@ -100,4 +100,6 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/tomnomnom/assetfinder@latest
     # encryption
     filippo.io/age/cmd/...@latest
+    # di
+    github.com/google/wire/cmd/wire@latest
 )
