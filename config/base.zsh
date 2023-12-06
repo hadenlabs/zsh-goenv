@@ -63,7 +63,7 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/swaggo/swag/cmd/swag@latest
     # mocks
     github.com/zekrotja/schnittstelle/cmd/schnittstelle@latest
-    github.com/vektra/mockery/v3@latest
+    github.com/vektra/mockery/v2@v2.38.0
     # scm git
     github.com/matsuyoshi30/gitsu@latest
 
