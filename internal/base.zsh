@@ -8,10 +8,8 @@ function goenv::internal::install {
 }
 
 function goenv::internal::load {
-    unset GOROOT
     unset GOPATH
     [ -e "${GOBREW_ROOT_BIN}" ] && export PATH="${GOBREW_CURRENT_BIN}:${GOBREW_ROOT_BIN}:${PATH}"
-    export GOROOT="${HOME}/.gobrew/current/go"
     export GOPATH="${HOME}/.gobrew/current/go"
 }
 
