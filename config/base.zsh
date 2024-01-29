@@ -12,11 +12,10 @@ export GOENV_PACKAGE_NAME=goenv
 export ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.21
 
 export GOENV_VERSIONS=(
-    1.18.1
     1.19.5
-    1.21.3
+    1.21.6
 )
-export GOENV_VERSION_GLOBAL=1.21.3
+export GOENV_VERSION_GLOBAL=1.21.6
 
 export GOENV_PACKAGES=(
     github.com/onsi/gomega
@@ -76,6 +75,7 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/motemen/ghq@latest
     github.com/git-chglog/git-chglog/cmd/git-chglog@latest
     github.com/minamijoyo/myaws@latest
+    gitlab.com/gitlab-org/cli/cmd/glab@main
     # sec
     github.com/aquasecurity/tfsec/cmd/tfsec@latest
     # debug
