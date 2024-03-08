@@ -41,6 +41,7 @@ export GOENV_PACKAGES=(
     github.com/OWASP/Amass
 
 )
+
 export GOENV_INSTALL_PACKAGES=(
     github.com/pengwynn/flint@latest
     # k8s
@@ -102,4 +103,6 @@ export GOENV_INSTALL_PACKAGES=(
     filippo.io/age/cmd/...@latest
     # di
     github.com/google/wire/cmd/wire@latest
+    # trace
+    github.com/nxtrace/NTrace-core@latest
 )
