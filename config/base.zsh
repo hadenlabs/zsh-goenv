@@ -105,4 +105,7 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/google/wire/cmd/wire@latest
     # trace
     github.com/nxtrace/NTrace-core@latest
+
+    # management
+    github.com/ankitpokhrel/jira-cli/cmd/jira@latest
 )
