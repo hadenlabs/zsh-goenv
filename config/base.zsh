@@ -108,4 +108,7 @@ export GOENV_INSTALL_PACKAGES=(
 
     # management
     github.com/ankitpokhrel/jira-cli/cmd/jira@latest
+
+    # kubernetes
+    sigs.k8s.io/kind@v0.22.0
 )
