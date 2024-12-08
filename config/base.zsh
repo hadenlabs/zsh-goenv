@@ -6,6 +6,7 @@ export GOENV_ROOT="${HOME}/.goenv"
 export GOENV_ROOT_BIN="${GOENV_ROOT}/bin"
 export GOBREW_ROOT_BIN="${HOME}/.gobrew/bin"
 export GOBREW_CURRENT_BIN="${HOME}/.gobrew/current/bin"
+export GOBREW_DOWNLOAD_URL="https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh"
 export GOENV_MESSAGE_BREW="Please install brew or use antibody bundle luismayta/zsh-brew"
 export GOENV_PACKAGE_NAME=goenv
 

@@ -3,7 +3,7 @@
 
 function goenv::internal::install {
     message_info "Installing ${GOENV_PACKAGE_NAME}"
-    curl -sLk https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh
+    curl -sLk "${GOBREW_DOWNLOAD_URL}" | sh
     message_success "Installed ${GOENV_PACKAGE_NAME}"
 }
 
