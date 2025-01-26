@@ -97,7 +97,8 @@ export GOENV_INSTALL_PACKAGES=(
     # engine template
     github.com/hairyhenderson/gomplate/v3/cmd/gomplate@latest
     github.com/sganon/env-secrets@latest
-
+    # emoji
+    github.com/muandane/goji@latest
     # scan
     github.com/tomnomnom/assetfinder@latest
     # encryption
