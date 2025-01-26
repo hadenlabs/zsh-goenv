@@ -8,13 +8,13 @@ All notable changes to this project will be documented in this file. This file u
 
 > 2021-01-26
 
-### Bug Fixes
-
-- change name load goenv init ([#10](https://github.com/hadenlabs/zsh-goenv/issues/10))
-
-### Performance Improvements
+### ⚡ Performance Improvements
 
 - delete unnecessary load goenv init ([#10](https://github.com/hadenlabs/zsh-goenv/issues/10))
+
+### 🐛 Bug Fixes
+
+- change name load goenv init ([#10](https://github.com/hadenlabs/zsh-goenv/issues/10))
 
 <a name="0.1.0"></a>
 
@@ -22,11 +22,7 @@ All notable changes to this project will be documented in this file. This file u
 
 > 2021-01-26
 
-### Code Refactoring
-
-- name functions for project ([#3](https://github.com/hadenlabs/zsh-goenv/issues/3))
-
-### Features
+### Other changes
 
 - implement settings chglog ([#6](https://github.com/hadenlabs/zsh-goenv/issues/6))
 - implement settings stylintrc ([#5](https://github.com/hadenlabs/zsh-goenv/issues/5))
@@ -42,3 +38,7 @@ All notable changes to this project will be documented in this file. This file u
 - implement settings for docker and docker-compose ([#1](https://github.com/hadenlabs/zsh-goenv/issues/1))
 - implement actions for make ([#1](https://github.com/hadenlabs/zsh-goenv/issues/1))
 - implement settings project ([#1](https://github.com/hadenlabs/zsh-goenv/issues/1))
+
+### ♻ Code Refactoring
+
+- name functions for project ([#3](https://github.com/hadenlabs/zsh-goenv/issues/3))
