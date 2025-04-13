@@ -88,7 +88,7 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/go-critic/go-critic/cmd/gocritic@latest
     golang.org/x/lint/golint@latest
     github.com/preslavmihaylov/todocheck@latest
-    github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+    github.com/golangci/golangci-lint/cmd/golangci-lint@v1.62.2
     github.com/google/yamlfmt/cmd/yamlfmt@latest
 
     github.com/zricethezav/gitleaks@latest
@@ -112,5 +112,5 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/ankitpokhrel/jira-cli/cmd/jira@latest
 
     # kubernetes
-    sigs.k8s.io/kind@v0.22.0
+    sigs.k8s.io/kind@v0.27.0
 )
