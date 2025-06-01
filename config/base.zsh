@@ -108,6 +108,9 @@ export GOENV_INSTALL_PACKAGES=(
     # trace
     github.com/nxtrace/NTrace-core@latest
 
+    # network
+    github.com/mr-karan/doggo/cmd/doggo@latest
+
     # management
     github.com/ankitpokhrel/jira-cli/cmd/jira@latest
 
