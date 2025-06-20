@@ -13,10 +13,10 @@ export GOENV_PACKAGE_NAME=goenv
 export ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.21
 
 export GOENV_VERSIONS=(
-    1.22.4
     1.23.4
+    1.24.4
 )
-export GOENV_VERSION_GLOBAL=1.23.4
+export GOENV_VERSION_GLOBAL=1.24.4
 
 export GOENV_PACKAGES=(
     github.com/onsi/gomega
