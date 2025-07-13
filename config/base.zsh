@@ -119,4 +119,7 @@ export GOENV_INSTALL_PACKAGES=(
 
     # kubernetes
     sigs.k8s.io/kind@v0.27.0
+
+    # grafana
+    github.com/grafana/grafanactl/cmd/grafanactl@v0.0.6
 )
