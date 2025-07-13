@@ -16,7 +16,7 @@ export GOENV_VERSIONS=(
     1.23.4
     1.24.4
 )
-export GOENV_VERSION_GLOBAL=1.24.4
+export GOENV_VERSION_GLOBAL="${JASPER_GOENV_VERSION_GLOBAL:-1.24.4}"
 
 export GOENV_PACKAGES=(
     github.com/onsi/gomega
