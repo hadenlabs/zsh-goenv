@@ -90,8 +90,11 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/preslavmihaylov/todocheck@latest
     github.com/golangci/golangci-lint/cmd/golangci-lint@v1.62.2
     github.com/google/yamlfmt/cmd/yamlfmt@latest
-
     github.com/zricethezav/gitleaks@latest
+
+    # format yaml, toml
+    github.com/mikefarah/yq/v4@latest
+
     # build
     github.com/aktau/github-release@latest
     # engine template

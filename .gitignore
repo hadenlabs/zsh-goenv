@@ -565,14 +565,19 @@ TMP_CHANGELOG.md
 .terraform.lock.hcl
 build
 .task
+.terraform.lock.hcl
 *.lock
 *.lock.hcl
 .cq/
-*.lock
 *.zip
-*.iml
+package-lock.json
+provision/ansible/*/roles/contrib
 .external_modules
-.pmd
 vendor
-!uv.lock
+charts
+.DS_Store
+.turbo
+.jira-config.json
+.infobot
+.jasper
 
