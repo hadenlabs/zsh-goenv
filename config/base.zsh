@@ -92,8 +92,10 @@ export GOENV_INSTALL_PACKAGES=(
     github.com/google/yamlfmt/cmd/yamlfmt@latest
     github.com/zricethezav/gitleaks@latest
 
+
     # format yaml, toml
     github.com/mikefarah/yq/v4@latest
+
 
     # build
     github.com/aktau/github-release@latest
