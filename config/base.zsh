@@ -96,6 +96,8 @@ export GOENV_INSTALL_PACKAGES=(
     # format yaml, toml
     github.com/mikefarah/yq/v4@latest
 
+    # direnv
+    github.com/direnv/direnv/v2@latest
 
     # build
     github.com/aktau/github-release@latest
