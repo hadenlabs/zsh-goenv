@@ -13,15 +13,6 @@ function goenv::internal::load {
     export GOPATH="${HOME}/.gobrew/current/go"
 }
 
-function goenv::internal::package::get {
-    if ! core::exists go; then
-        message_warning "it's necessary have go"
-        return
-    fi
-    GO111MODULE=on go get -v "${1}"
-    message_success "Installed ${1} required Go packages"
-}
-
 function goenv::internal::package::install {
     if ! core::exists go; then
         message_warning "it's necessary have go"
@@ -29,20 +20,6 @@ function goenv::internal::package::install {
     fi
     GO111MODULE=on go install "${1}"
     message_success "Installed ${1} required Go packages"
-}
-
-function goenv::internal::packages::get {
-    if ! core::exists go; then
-        message_warning "it's necessary have go"
-        return
-    fi
-
-    message_info "Installing required go packages"
-
-    for package in "${GOENV_PACKAGES[@]}"; do
-        goenv::internal::package::get "${package}"
-    done
-    message_success "Installed required Go packages"
 }
 
 function goenv::internal::packages::install {

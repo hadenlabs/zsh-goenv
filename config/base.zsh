@@ -18,28 +18,6 @@ export GOENV_VERSIONS=(
 )
 export GOENV_VERSION_GLOBAL="${JASPER_GOENV_VERSION_GLOBAL:-1.25.11}"
 
-export GOENV_PACKAGES=(
-    github.com/onsi/gomega
-    github.com/josharian/impl
-    github.com/onsi/ginkgo/ginkgo
-    github.com/dougm/goflymake
-    github.com/fatih/gomodifytags
-    github.com/cweill/gotests/...
-
-    # tools
-    github.com/99designs/aws-vault
-    github.com/kardianos/govendor
-    github.com/zricethezav/gitleaks/v7
-    github.com/preslavmihaylov/todocheck
-
-    # build
-    github.com/gobuild/gopack
-
-    # security
-    github.com/OWASP/Amass
-
-)
-
 export GOENV_INSTALL_PACKAGES=(
     github.com/pengwynn/flint@latest
     # k8s
@@ -128,4 +106,33 @@ export GOENV_INSTALL_PACKAGES=(
 
     # grafana
     github.com/grafana/grafanactl/cmd/grafanactl@v0.0.6
+
+    # testing
+    go install github.com/onsi/gomega@latest
+
+    go install github.com/josharian/impl@latest
+
+    # Ginkgo moderno
+    go install github.com/onsi/ginkgo/v2/ginkgo@latest
+
+    go install github.com/dougm/goflymake@latest
+
+    go install github.com/fatih/gomodifytags@latest
+
+    go install github.com/cweill/gotests/...@latest
+
+    # tools
+    go install github.com/99designs/aws-vault@latest
+
+    go install github.com/kardianos/govendor@latest
+
+    go install github.com/zricethezav/gitleaks/v8@latest
+
+    go install github.com/preslavmihaylov/todocheck@latest
+
+    # build
+    go install github.com/gobuild/gopack@latest
+
+    # security
+    go install github.com/owasp-amass/amass/v4/...@latest
 )
