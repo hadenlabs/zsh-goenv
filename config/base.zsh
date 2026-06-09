@@ -13,10 +13,10 @@ export GOENV_PACKAGE_NAME=goenv
 export ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.21
 
 export GOENV_VERSIONS=(
-    1.23.4
-    1.24.4
+    1.24.11
+    1.25.11
 )
-export GOENV_VERSION_GLOBAL="${JASPER_GOENV_VERSION_GLOBAL:-1.24.4}"
+export GOENV_VERSION_GLOBAL="${JASPER_GOENV_VERSION_GLOBAL:-1.25.11}"
 
 export GOENV_PACKAGES=(
     github.com/onsi/gomega
@@ -34,9 +34,6 @@ export GOENV_PACKAGES=(
 
     # build
     github.com/gobuild/gopack
-    # scan
-    github.com/projectdiscovery/subfinder
-    github.com/projectdiscovery/httpx
 
     # security
     github.com/OWASP/Amass
@@ -68,6 +65,8 @@ export GOENV_INSTALL_PACKAGES=(
     # scm git
     github.com/matsuyoshi30/gitsu@latest
 
+    github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+    github.com/projectdiscovery/httpx/cmd/httpx@latest
     # release
     github.com/goreleaser/goreleaser@latest
     # tools
