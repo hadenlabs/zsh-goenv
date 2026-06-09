@@ -19,120 +19,139 @@ export GOENV_VERSIONS=(
 export GOENV_VERSION_GLOBAL="${JASPER_GOENV_VERSION_GLOBAL:-1.25.11}"
 
 export GOENV_INSTALL_PACKAGES=(
-    github.com/pengwynn/flint@latest
-    # k8s
-    sigs.k8s.io/kustomize/kustomize/v5@latest
-    github.com/particledecay/kconf@latest
-    # ide
-    github.com/mdempsky/gocode@latest
-    github.com/rogpeppe/godef@latest
-    golang.org/x/tools/cmd/goimports@latest
-    golang.org/x/tools/cmd/godoc@latest
-    golang.org/x/tools/cmd/gorename@latest
-    golang.org/x/tools/gopls@latest
-    golang.org/x/tools/cmd/guru@latest
-    github.com/davidrjenni/reftools/cmd/fillstruct@latest
-    github.com/haya14busa/gopkgs/cmd/gopkgs@latest
-    github.com/godoctor/godoctor@latest
-    github.com/zmb3/gogetdoc@latest
-    # apidocs
-    github.com/swaggo/swag/cmd/swag@latest
-    # mocks
-    github.com/zekrotja/schnittstelle/cmd/schnittstelle@latest
-    github.com/vektra/mockery/v2@v2.38.0
-    # scm git
-    github.com/matsuyoshi30/gitsu@latest
 
-    github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-    github.com/projectdiscovery/httpx/cmd/httpx@latest
-    # release
-    github.com/goreleaser/goreleaser@latest
-    # tools
-    github.com/go-task/task/v3/cmd/task@latest
-    honnef.co/go/tools/cmd/staticcheck@latest
-    github.com/nektos/act@latest
-    github.com/motemen/ghq@latest
-    github.com/git-chglog/git-chglog/cmd/git-chglog@latest
-    github.com/minamijoyo/myaws@latest
-    gitlab.com/gitlab-org/cli/cmd/glab@main
-    # sec
-    github.com/aquasecurity/tfsec/cmd/tfsec@latest
-    # debug
-    github.com/go-delve/delve/cmd/dlv@latest
-    # validators
-    github.com/BurntSushi/toml/cmd/tomlv@latest
-    github.com/fzipp/gocyclo/cmd/gocyclo@latest
-    github.com/go-critic/go-critic/cmd/gocritic@latest
-    golang.org/x/lint/golint@latest
-    github.com/preslavmihaylov/todocheck@latest
-    github.com/golangci/golangci-lint/cmd/golangci-lint@v1.62.2
-    github.com/google/yamlfmt/cmd/yamlfmt@latest
-    github.com/zricethezav/gitleaks@latest
+  # ----------------------------------------------------------------------------
+  # Kubernetes
+  # ----------------------------------------------------------------------------
 
+  sigs.k8s.io/kustomize/kustomize/v5@latest
+  sigs.k8s.io/kind@v0.27.0
+  github.com/particledecay/kconf@latest
 
-    # format yaml, toml
-    github.com/mikefarah/yq/v4@latest
+  # ----------------------------------------------------------------------------
+  # Go Development
+  # ----------------------------------------------------------------------------
 
-    # direnv
-    github.com/direnv/direnv/v2@latest
+  golang.org/x/tools/gopls@latest
+  golang.org/x/tools/cmd/goimports@latest
+  golang.org/x/tools/cmd/gorename@latest
+  golang.org/x/tools/cmd/guru@latest
 
-    # build
-    github.com/aktau/github-release@latest
-    # engine template
-    github.com/hairyhenderson/gomplate/v3/cmd/gomplate@latest
-    github.com/sganon/env-secrets@latest
-    # emoji
-    github.com/muandane/goji@latest
-    # scan
-    github.com/tomnomnom/assetfinder@latest
-    # encryption
-    filippo.io/age/cmd/...@latest
-    # di
-    github.com/google/wire/cmd/wire@latest
-    # trace
-    github.com/nxtrace/NTrace-core@latest
+  github.com/josharian/impl@latest
+  github.com/fatih/gomodifytags@latest
+  github.com/cweill/gotests/gotests@latest
+  github.com/davidrjenni/reftools/cmd/fillstruct@latest
 
-    # network
-    github.com/mr-karan/doggo/cmd/doggo@latest
+  # ----------------------------------------------------------------------------
+  # Testing
+  # ----------------------------------------------------------------------------
 
-    # management
-    github.com/ankitpokhrel/jira-cli/cmd/jira@latest
+  github.com/onsi/ginkgo/v2/ginkgo@latest
+  github.com/vektra/mockery/v2@v2.38.0
 
-    # git
-    github.com/jesseduffield/lazygit@v0.49.0
+  # ----------------------------------------------------------------------------
+  # API Documentation
+  # ----------------------------------------------------------------------------
 
-    # kubernetes
-    sigs.k8s.io/kind@v0.27.0
+  github.com/swaggo/swag/cmd/swag@latest
 
-    # grafana
-    github.com/grafana/grafanactl/cmd/grafanactl@v0.0.6
+  # ----------------------------------------------------------------------------
+  # Dependency Injection
+  # ----------------------------------------------------------------------------
 
-    # testing
-    go install github.com/onsi/gomega@latest
+  github.com/google/wire/cmd/wire@latest
 
-    go install github.com/josharian/impl@latest
+  # ----------------------------------------------------------------------------
+  # Release & Build
+  # ----------------------------------------------------------------------------
 
-    # Ginkgo moderno
-    go install github.com/onsi/ginkgo/v2/ginkgo@latest
+  github.com/goreleaser/goreleaser/v2@latest
+  github.com/go-task/task/v3/cmd/task@latest
+  github.com/git-chglog/git-chglog/cmd/git-chglog@latest
+  github.com/aktau/github-release@latest
 
-    go install github.com/dougm/goflymake@latest
+  # ----------------------------------------------------------------------------
+  # Git & SCM
+  # ----------------------------------------------------------------------------
 
-    go install github.com/fatih/gomodifytags@latest
+  github.com/jesseduffield/lazygit@v0.49.0
+  github.com/motemen/ghq@latest
+  github.com/matsuyoshi30/gitsu@latest
+  gitlab.com/gitlab-org/cli/cmd/glab@main
 
-    go install github.com/cweill/gotests/...@latest
+  # ----------------------------------------------------------------------------
+  # Quality & Linters
+  # ----------------------------------------------------------------------------
 
-    # tools
-    go install github.com/99designs/aws-vault@latest
+  honnef.co/go/tools/cmd/staticcheck@latest
+  github.com/golangci/golangci-lint/cmd/golangci-lint@v1.62.2
+  github.com/go-critic/go-critic/cmd/gocritic@latest
+  github.com/fzipp/gocyclo/cmd/gocyclo@latest
+  golang.org/x/lint/golint@latest
+  github.com/preslavmihaylov/todocheck@latest
 
-    go install github.com/kardianos/govendor@latest
+  # ----------------------------------------------------------------------------
+  # Security
+  # ----------------------------------------------------------------------------
 
-    go install github.com/zricethezav/gitleaks/v8@latest
+  github.com/zricethezav/gitleaks/v8@latest
+  github.com/aquasecurity/tfsec/cmd/tfsec@latest
+  github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+  github.com/projectdiscovery/httpx/cmd/httpx@latest
+  github.com/owasp-amass/amass/v4/cmd/amass@latest
 
-    go install github.com/preslavmihaylov/todocheck@latest
+  # ----------------------------------------------------------------------------
+  # Infrastructure
+  # ----------------------------------------------------------------------------
 
-    # build
-    go install github.com/gobuild/gopack@latest
+  github.com/minamijoyo/myaws@latest
+  github.com/99designs/aws-vault@latest
 
-    # security
-    go install github.com/owasp-amass/amass/v4/...@latest
+  # ----------------------------------------------------------------------------
+  # YAML / TOML
+  # ----------------------------------------------------------------------------
+
+  github.com/mikefarah/yq/v4@latest
+  github.com/google/yamlfmt/cmd/yamlfmt@latest
+  github.com/BurntSushi/toml/cmd/tomlv@latest
+
+  # ----------------------------------------------------------------------------
+  # Templates & Configuration
+  # ----------------------------------------------------------------------------
+
+  github.com/hairyhenderson/gomplate/v3/cmd/gomplate@latest
+  github.com/sganon/env-secrets@latest
+  github.com/direnv/direnv/v2@latest
+
+  # ----------------------------------------------------------------------------
+  # Debugging
+  # ----------------------------------------------------------------------------
+
+  github.com/go-delve/delve/cmd/dlv@latest
+
+  # ----------------------------------------------------------------------------
+  # Networking
+  # ----------------------------------------------------------------------------
+
+  github.com/mr-karan/doggo/cmd/doggo@latest
+
+  # ----------------------------------------------------------------------------
+  # Discovery
+  # ----------------------------------------------------------------------------
+
+  github.com/tomnomnom/assetfinder@latest
+  github.com/nxtrace/NTrace-core@latest
+
+  # ----------------------------------------------------------------------------
+  # Productivity
+  # ----------------------------------------------------------------------------
+
+  github.com/ankitpokhrel/jira-cli/cmd/jira@latest
+
+  # ----------------------------------------------------------------------------
+  # Misc
+  # ----------------------------------------------------------------------------
+
+  filippo.io/age/cmd/...@latest
+  github.com/grafana/grafanactl/cmd/grafanactl@v0.0.6
 )
