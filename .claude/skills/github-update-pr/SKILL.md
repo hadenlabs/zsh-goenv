@@ -1,5 +1,5 @@
 ---
-name: update-pr
+name: github-update-pr
 description: Push branch commits and update the existing PR body safely (prefer REST API)
 triggers:
   - "Use the skill `github-update-pr`"

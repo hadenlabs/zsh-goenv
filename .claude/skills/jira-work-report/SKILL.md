@@ -1,6 +1,7 @@
 ---
 name: jira-work-report
 description: Skill para generar un reporte de implementacion para el issue de Jira derivado del branch actual usando un template y un resumen basado en commits, y publicarlo como comentario.
+license: Proprietary
 triggers:
   - "Usa el skill `jira-work-report`"
   - "Genera un reporte de implementacion para la tarea Jira actual y publcalo como comentario"

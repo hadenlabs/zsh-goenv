@@ -1,6 +1,7 @@
 ---
 name: jira-cloud-frequent-tasks-csv
 description: Skill para consultar Jira Cloud mediante MCP y generar un archivo CSV con las tareas más frecuentes de un proyecto dado, sin filtrar por estado.
+license: Proprietary
 metadata:
   opencode:
     emoji: 📊

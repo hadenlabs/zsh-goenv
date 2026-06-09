@@ -1,6 +1,6 @@
-# Entrada para OpenSpec
+# {{issue.title}}
 
-## Issue
+## Contexto del Issue
 
 - Key: {{issue.key}}
 - Title: {{issue.title}}
@@ -10,85 +10,87 @@
 ## Contenido Fuente
 
 ### Scenario
+
 {{content.scenario}}
 
 ### Acceptance Tests
+
 {{#each content.acceptance_tests}}
 - {{this}}
 {{/each}}
 
 ### Sources
+
 {{#each content.sources}}
 - {{this}}
 {{/each}}
 
-### Descripción Completa
-{{content.raw_description}}
+{{#if content.context_queries}}
+### Context Queries
+
+{{#each content.context_queries}}
+- {{this}}
+{{/each}}
+{{/if}}
 
 ---
 
-## Tarea
+## Contexto Relevante (Enrichment)
 
-Generar una especificación completa en OpenSpec basada ÚNICAMENTE en el contenido proporcionado.
+{{#if enrichment.status}}
+
+Status: {{enrichment.status}}
+
+{{#each enrichment.mcp}}
+
+### Contexto derivado de: {{this.query}}
+
+{{#if this.result}}
+{{this.result}}
+{{/if}}
+
+{{#if this.error}}
+Error: {{this.error}}
+{{/if}}
+
+{{/each}}
+
+{{/if}}
 
 ---
 
-## Guía
+## Instrucción
 
-Usa la información para:
-
-- Entender el contexto del problema
-- Identificar el problema principal
-- Definir el alcance functional
-- Convertir los acceptance tests en requerimientos claros y testeables
-- Mantener una estructura clara, consistente y sin ambigüedad
-
-Este prompt está diseñado para ayudar tanto a humanos como a sistemas a generar especificaciones de alta calidad a partir de issues de Jira.
+Generar una especificación OpenSpec usando ÚNICAMENTE el contenido proporcionado.
 
 ---
 
-## Restricciones
+## Reglas
 
+- Usar SOLO la información proporcionada
 - NO inventar información
-- Usar SOLO el contenido proporcionado
-- Mantener la intención original del issue
-- Evitar ambigüedades
-- Usar keywords tipo RFC en los requerimientos:
+- Convertir acceptance tests en requerimientos
+- Usar:
   - MUST
   - SHOULD
   - MAY
 
 ---
 
-## Requisitos de Salida
+## Salida
 
-- Generar una especificación válida de OpenSpec
-- Los requerimientos deben estar en inglés usando:
-  - The system MUST ...
-  - The system SHOULD ...
-  - The system MAY ...
-- Mantener trazabilidad con el issue ({{issue.key}})
-- Usar markdown estructurado
+- Especificación en markdown
+- Requerimientos en inglés
+- Trazabilidad con {{issue.key}}
 
 ---
 
-## Contrato de Validación
+## Artifacts
 
-La especificación generada DEBE pasar `task validate` sin cambios manuales.
+### tasks.md
 
----
+Debe incluir:
 
-## Post-Procesamiento (OBLIGATORIO)
-
-Después de generar la especificación:
-
-`task validate`
-
----
-
-## Reglas de Salida
-
-- Retornar SOLO la especificación final
-- NO incluir explicaciones
-- NO incluir razonamiento
-- NO incluir bloques de código
+```bash
+task validate
+```

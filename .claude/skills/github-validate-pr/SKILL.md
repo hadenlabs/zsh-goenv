@@ -1,5 +1,5 @@
 ---
-name: validate-pr
+name: github-validate-pr
 description: Find vulnerabilities or errors in a pull request (checks, scans, merge blockers) and propose fixes.
 triggers:
   - "Use the skill `github-validate-pr`"

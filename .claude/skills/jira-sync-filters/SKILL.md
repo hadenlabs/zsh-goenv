@@ -1,6 +1,7 @@
 ---
 name: jira-sync-filters
 description: Skill para sincronizar filtros de Jira con un archivo markdown. Crea, actualiza y reconcilia filtros (incluyendo JQL, description y favourite).
+license: Proprietary
 metadata:
   author: "hadenlabs"
   version: "0.0.0"

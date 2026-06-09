@@ -1,6 +1,6 @@
 ---
 name: jira-start-task
-description: Selecciona un issue de Jira, genera un prompt OpenSpec usando el template local del skill y crea/usa un branch feature/<ISSUE-KEY>.
+description: Resolve a Jira issue, ensure the correct branch, generate an OpenSpec prompt, and optionally enrich context using obsidian MCP.
 license: Proprietary
 metadata:
   author: "hadenlabs"
@@ -17,154 +17,121 @@ metadata:
       - git
       - workflow
       - openspec
+      - mcp
+      - obsidian
     mcp:
       preferredServer: jira
 ---
 
 # jira-start-task
 
-Inicia el trabajo sobre un issue de Jira seleccionándolo o proporcionando su clave, genera un prompt para OpenSpec usando el template local del skill y prepara el branch correspondiente en git.
-
----
-
-## Trigger phrases
-
-El humano puede invocar este skill usando frases como:
-
-- "usa el skill jira-start-task"
-- "quiero empezar una tarea de Jira"
-- "trae mis issues pendientes"
-- "genera el prompt para OpenSpec desde Jira"
-- "crea el branch para este issue"
-- "trabajar en issue AR-123"
-
-## Inputs
-
-- `issueKey` (string, optional)
+Starts work on a Jira issue and generates an OpenSpec prompt ready for execution.
 
 ---
 
 ## Template Resolution
 
-El template SIEMPRE vive junto al skill:
+Path:
 
-```
+```text
 <skill_root>/prompt.md.tpl
 ```
 
-Donde `<skill_root>` es el directorio donde se encuentra este archivo.
+Rules:
 
-### Reglas
-
-- El archivo es obligatorio
-- No existe fallback
-- No se buscan otros paths
-
-Si no existe:
-
-```
-prompt.md.tpl not found in skill directory.
-```
+- MUST exist
+- NO fallback allowed
 
 ---
 
 ## Flow
 
-### 1. Resolve Issue
+---
 
-#### Si `issueKey` es proporcionado
+## 1. Resolve Issue
 
-- Fetch directo vía MCP (Jira)
+### If `issueKey` is provided
 
-#### Si NO (modo interactivo)
+- Fetch via Jira MCP
 
-- Validar `jasper.toml`
-- Leer `issueTracking.projectKey`
+### If NOT provided
 
-Si no existe:
+- Read `jasper.toml`
+- Get `issueTracking.projectKey`
 
-```
+If missing:
 
+```text
 jasper.toml not found. Provide issueKey or configure projectKey.
-
 ```
 
-- Ejecutar JQL:
+Run JQL:
 
-```sql
+```jql
 project = <PROJECT_KEY>
 AND assignee = currentUser()
 AND statusCategory != Done
 ORDER BY updated DESC
 ```
 
-- Mostrar lista
-- Usuario selecciona issue
-
 ---
 
-### 2. Fetch Issue
+## 2. Fetch Issue
 
-Obtener:
+Retrieve:
 
 - key
 - title
-- description (markdown)
+- description
 
-Si falla:
-
-```
-Jira issue <ISSUE-KEY> could not be fetched.
-```
+Fail if not found.
 
 ---
 
-### 3. Parsing
+## 3. Git (Deterministic)
 
-Buscar headings (case-insensitive):
+Branch:
+
+```text
+feature/<ISSUE-KEY>
+```
+
+Rules:
+
+- MUST ensure branch before processing
+- checkout if exists
+- create if not
+
+---
+
+## 4. Parsing
+
+Extract:
 
 - Scenario
 - Acceptance Tests
-- Acceptance Criteria
 - Sources
-
-Si no se encuentran headings claros:
-
-- usar `raw_description` como fallback
-- no fallar el flujo
-
----
-
-### 4. Extracción de contenido (NO transformación rígida)
-
-Extraer contenido sin imponer semántica de especificación.
-
-#### Scenario
-
-- Extraer texto bajo heading
-- Mantener estructura original (párrafos, bullets)
+- Context Queries
 
 Fallback:
 
-- usar toda la descripción
+- raw_description
 
 ---
 
-#### Acceptance Tests
+## 5. Content Extraction
 
-- Extraer lista de ítems
-- Mantener formato original (Gherkin, bullets, etc.)
+### Context Queries
 
----
+Pattern:
 
-#### Sources
-
-- Extraer links o referencias
-- Sin transformación
+```text
+mcp obsidian: <query>
+```
 
 ---
 
-### 5. Data Contract (RAW, orientado a prompt)
+## 6. Data Contract
 
 ```yaml
 issue:
@@ -175,114 +142,146 @@ content:
   scenario: string
   acceptance_tests: string[]
   sources: string[]
+  context_queries: string[]
   raw_description: string
 ```
 
 ---
 
-### 6. Git
+# 7. Enrichment (Obsidian MCP - Smart Context)
 
-Branch:
-
-```
-feature/<ISSUE-KEY>
-```
-
-Reglas:
-
-- No existe → crear + checkout
-- Existe → solo checkout
+This step enriches the prompt with **relevant, human-readable context** from the Obsidian vault.
 
 ---
 
-### 7. Render Template
+## Execution Rule
 
-- Leer:
+Run ONLY if:
 
-```
-<skill_root>/prompt.md.tpl
-```
-
-- Renderizar usando el contrato `content`
-- Sintaxis tipo mustache
-
-Si falla el render:
-
-- mostrar error
-- NO generar archivo
-- NO continuar flujo
+- context_queries NOT empty
 
 ---
 
-### 8. Output
+## MCP Flow (Per Query)
 
+For each query:
+
+---
+
+### 1. Search
+
+Primary search tool:
+
+- `obsidian_obsidian_simple_search`
+
+Optional advanced search (when needed for narrower matching):
+
+- `obsidian_obsidian_complex_search`
+
+---
+
+### 2. Selection
+
+The system MUST:
+
+- rank results by textual relevance to the query
+- deduplicate by file path (one entry per file)
+- select top 3-5 files per query
+- require valid `selected_path`
+
+---
+
+### 3. Fetch File Content
+
+The system MUST fetch selected files using:
+
+- `obsidian_obsidian_get_file_contents` (single file), or
+- `obsidian_obsidian_batch_get_file_contents` (multiple files)
+
+with:
+
+- selected_path: <vault_relative_file_path>
+
+---
+
+### 4. Summarization (CRITICAL)
+
+The system MUST transform fetched note content into a concise summary.
+
+Rules:
+
+- MUST extract only relevant parts for the scenario
+- MUST remove noise (excess formatting, unrelated sections)
+- MUST be readable plain text
+- MUST be 3-6 bullet points
+- MUST focus on actionable rules / patterns
+
+---
+
+### 5. Fallback
+
+If search yields no usable files, or selected paths cannot be fetched:
+
+- list vault files with `obsidian_obsidian_list_files_in_vault`
+- optionally narrow scope with `obsidian_obsidian_list_files_in_dir`
+- retry search/fetch with refined query or narrowed directory scope
+
+---
+
+## Enrichment Output
+
+```yaml
+enrichment:
+  status: "applied" | "failed" | "skipped_no_context_queries" | "skipped_obsidian_unavailable"
+  reason: string
+  context_queries: string[]
+  mcp:
+    - query: string
+      tool: "obsidian_obsidian_get_file_contents" | "obsidian_obsidian_batch_get_file_contents"
+      selected_path: string
+      result: string  # summarized context
+      error?: string
 ```
+
+---
+
+## Rules
+
+- MUST NOT modify original content
+- MUST continue on errors
+- MUST always return enrichment block
+
+---
+
+## 8. Render Template
+
+Inputs:
+
+- issue
+- content
+- enrichment
+
+---
+
+## 9. Output
+
+```text
 docs/prompts/openspec/<ISSUE-KEY>.md
 ```
 
 ---
 
-### 9. Idempotencia
-
-- Si existe:
-  - comparar contenido
-  - igual → no escribir
-  - distinto → overwrite
-
----
-
-### 10. Working Tree
-
-- Si está dirty:
-  - warning
-  - no bloquear
-
----
-
 ## Validation
 
-El archivo generado debe:
+Output MUST:
 
-- Ser un prompt válido (no una spec)
-- Respetar el template
-- Contener información suficiente del issue
-- Permitir que OpenSpec genere requerimientos en inglés usando:
-  - MUST
-  - SHOULD
-  - MAY
+- be valid OpenSpec prompt
+- use MUST / SHOULD / MAY
 
 ---
 
 ## Debug
 
-Mostrar:
-
-- issue seleccionado
-- path del template
-- path del output
-
----
-
-## Output Final
-
-- Issue seleccionado
-- Prompt generado
-- Branch activo `feature/<ISSUE-KEY>`
-
----
-
-## Warnings
-
-```
-Warning: Could not fully parse structured sections. Using fallback extraction.
-```
-
----
-
-## Notas
-
-- No inventar datos
-- No incluir issues en Done
-- Parsing best-effort pero consistente
-- El template define completamente la estructura del prompt
-- El output final de OpenSpec debe estar en inglés (MUST/SHOULD/MAY)
+- issue source
+- branch
+- enrichment status

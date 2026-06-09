@@ -1,6 +1,7 @@
 ---
 name: jira-cloud-incident-manager
 description: Skill para gestionar incidentes en Jira Cloud usando el MCP de Atlassian (crear, buscar y actualizar issues).
+license: Proprietary
 metadata:
   opencode:
     emoji: 🚨

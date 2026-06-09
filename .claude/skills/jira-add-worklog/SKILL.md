@@ -1,6 +1,7 @@
 ---
 name: jira-add-worklog
 description: Skill para registrar worklogs en Jira usando el issue key derivado del branch actual y una descripcion basada en los commits del branch.
+license: Proprietary
 triggers:
   - "Usa el skill `jira-add-worklog`"
   - "Registra tiempo en Jira usando el issue del branch actual"

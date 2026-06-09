@@ -29,9 +29,7 @@ repos:
           (?x)^(
           AGENTS.md|
           CHANGELOG.md|
-          .claude/skills/.*/SKILL\.md$|
-          skills/.*/SKILL\.md$|
-          skills/.*/README\.md$|
+          ^\.(opencode|claude)/skills/.*$|
           app/components/sections\/.*$|
           app/data\/.*$|
           app/ia/datasets\/.*$|
@@ -42,14 +40,12 @@ repos:
           go.sum|
           openapi.yaml|
           provision/prompts\/.*$|
-          openspec\/.*$|
           docs/prompts/openspec\/.*$|
           .+\.lock$|
           .+\.mdx$|
           .+\.node_modules\/.*$|
           .+\.sops.*$|
           .+\.vendor\/.*$|
-          src/context/humans\.md$|
           )$
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v9.24.0

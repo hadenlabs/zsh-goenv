@@ -2,6 +2,6 @@
   "source": "https://github.com/hadenlabs/jasper",
   "sourceType": "git",
   "repoUrl": "https://github.com/hadenlabs/jasper",
-  "subpath": ".claude/skills/update-pr",
-  "installedAt": "2026-05-01T11:58:33.608Z"
+  "subpath": "skills/update-pr",
+  "installedAt": "2026-06-09T02:05:28.410Z"
 }

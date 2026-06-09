@@ -1,6 +1,7 @@
 ---
 name: jira-sync-components
 description: Skill para sincronizar componentes de Jira con un archivo markdown. Crea, actualiza y reconcilia componentes (incluyendo description).
+license: Proprietary
 metadata:
   author: "hadenlabs"
   version: "0.0.0"

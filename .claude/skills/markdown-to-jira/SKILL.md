@@ -1,6 +1,7 @@
 ---
 name: markdown-to-jira
 description: Skill para crear issues de tipo epic y/o task en Jira Cloud a partir de un archivo Markdown y luego completar componentes, labels y issue keys.
+license: Proprietary
 metadata:
   author: "hadenlabs"
   version: "0.0.0"
@@ -38,6 +39,9 @@ Cada bloque debe incluir:
 - `### Acceptance Tests`
 - `### Sources:`
 
+Opcional:
+- `### Context Queries`: seccion cuyo texto se appende al description solo cuando existe en el markdown
+
 ### Metadatos requeridos por tipo de bloque
 
 Para cualquier bloque:
@@ -68,9 +72,13 @@ Notas:
    - `Task`: debe incluir `Issue Metadata`, `Scenario`, `Acceptance Tests` y `Sources`, con sus metadatos requeridos.
 4. **Extraer contenido para description**: Para cada bloque, extraer las secciones:
    - `## Scenario`: texto principal del escenario
-   - `### Acceptance Tests`: lista detests
+   - `### Acceptance Tests`: lista de tests
    - `### Sources`: links o referencias
-     Combinar en un description string: Scenario + Acceptance Tests + Sources
+   - `### Context Queries`: texto opcional (solo si existe en el bloque)
+     - Formato: cada linea `mcp <source>: <query>` se preserva como texto raw
+     - Si la seccion NO existe → no appendear nada (comportamiento original)
+     - Si la seccion SI existe → appendear el texto bajo ese heading al description
+   Combinar en un description string: Scenario + Acceptance Tests + Sources [+ Context Queries]
 5. Si existe un bloque `Epic`, crearlo primero con Jira MCP, incluyendo el `description` del paso 4.
 6. Guardar el `issueKey` real del epic si fue creado.
 7. Crear cada `Task`:
@@ -93,7 +101,10 @@ Notas:
   1. `## Scenario` (todo el texto bajo este heading)
   2. `### Acceptance Tests` (items de la lista)
   3. `### Sources` (links o texto bajo este heading)
-     El resultado se pasa en el campo `description` de `jira_createJiraIssue`.
+  4. `### Context Queries` (texto opcional bajo este heading, solo si existe)
+     - El texto se appende tal cual, preservando lineas `mcp <source>: <query>` como raw text
+     - Si la seccion NO existe en el markdown, no appendear nada
+  El resultado se pasa en el campo `description` de `jira_createJiraIssue`.
 - Valida los metadatos requeridos segun el tipo de bloque antes de crear issues.
 - Si el documento tiene `Epic` y `Task`, crea primero el `Epic` y luego las `Task`.
 - Si el documento tiene solo `Task`, no exijas un bloque `Epic`.
