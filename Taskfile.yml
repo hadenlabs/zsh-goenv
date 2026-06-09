@@ -14,8 +14,8 @@ includes:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/python/Taskfile.yml"
   uv:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/uv/Taskfile.yml"
-  pnpm:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/pnpm/Taskfile.yml"
+  bun:
+    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/bun/Taskfile.yml"
   go:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/go/Taskfile.yml"
   gradle:
@@ -32,12 +32,10 @@ includes:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/version/Taskfile.yml"
   release:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/release/Taskfile.yml"
-  opencode:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/opencode/Taskfile.yml"
+  ai:
+    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/ai/Taskfile.yml"
   biome:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/biomejs/Taskfile.yml"
-  bun:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/bun/Taskfile.yml"
   skills:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/skills/Taskfile.yml"
   plantuml:
@@ -162,11 +160,12 @@ tasks:
     desc: "Check all dependencies"
     deps:
       - uv:check
-      - pnpm:check
+      - node:check
       - changelog:check
       - git:check
       - docs:check
-      - opencode:check
+      - go:check
+      - ai:check
       - bun:check
       - skills:check
 
@@ -199,16 +198,18 @@ tasks:
       - >-
         [ -e ".env" ] || cp -rf .env.example .env
       - task: uv:setup
+      - task: ai:setup
       - task: skills:setup
 
   environment:
     desc: Setup environment of project
     cmds:
+      - task: ai:environment
       - task: uv:environment
-      - task: bun:setup
+      - task: node:environment
       - task: pre-commit:setup
       - task: git:setup
-      - task: bun:setup
+      - task: bun:environment
 
   fix:
     desc: "Run fix on all files"
